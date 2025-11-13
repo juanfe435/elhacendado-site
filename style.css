@@ -1,0 +1,698 @@
+:root {
+  --crema: #FAEB8F;
+  --naranja: #FF6224;
+  --negro-claro: #1D1D1D;
+  --negro: #0F0F0F;
+  --blanco: #FFFFFF;
+  --rojo: #CF2D0C;
+  --verde: #438F36;
+  --cremaf: #FFFFF0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cremaf);
+  font-family: 'Georgia', serif;
+  color: var(--negro);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--cremaf);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--rojo);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--negro);
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  background-color: var(--verde);
+  color: var(--crema);
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.hero-texto h1 {
+  font-size: 48px;
+  line-height: 1.3;
+  max-width: 700px;
+  color: var(--blanco);
+  font-weight: 500;
+}
+
+.hero-sub{
+  margin-top: 14px;
+  max-width: 680px;
+  font-size: clamp(16px, 2.1vw, 22px);
+  line-height: 1.55;
+  color: var(--blanco);
+  opacity: .95;
+}
+
+
+.hero-img img {
+  max-width: 450px;
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Galería de productos full width */
+.galeria-productos {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--cremaf);
+  padding: 40px 0;
+}
+
+/* Carrusel general */
+.hero-carrusel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 30px auto;
+  padding: 0 40px;
+}
+
+/* Contenedor interno que se moverá */
+.carrusel-productos {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 30px;
+}
+
+/* Imágenes individuales */
+.carrusel-productos img {
+  width: 250px;
+  flex-shrink: 0;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.carrusel-productos img:hover {
+  transform: scale(1.05);
+}
+
+/* Flechas */
+.carrusel-flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--negro-claro);
+  color: var(--blanco);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: background-color 0.3s ease;
+}
+
+.carrusel-flecha:hover {
+  background-color: var(--rojo);
+}
+
+.carrusel-flecha.izquierda {
+  left: 10px;
+}
+
+.carrusel-flecha.derecha {
+  right: 10px;
+}
+
+
+
+/* Descripción Empresa */
+.descripcion-empresa {
+  background-color: var(--cremaf);
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.titulo-descripcion {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--rojo);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contenedor-descripcion p {
+  font-size: 20px;
+  color: var(--rojo);
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Botón CTA si decides usarlo */
+.boton-cta {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: var(--naranja);
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.boton-cta:hover {
+  background-color: #e0551e;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container img {
+  height: 50px;
+  width: auto;
+  border-radius: 6px;
+}
+
+.logo-texto {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--rojo);
+}
+
+
+
+/* CTA WhatsApp */
+.cta-wa{
+  background: var(--cremaf);
+  padding: 32px 40px 56px;
+  text-align: center;
+}
+.cta-wa h2{font-size:26px; color: var(--negro); margin-bottom:8px}
+.cta-wa p{font-size:18px; color: var(--negro); margin-bottom:18px}
+.cta-actions{display:flex; gap:16px; justify-content:center; flex-wrap:wrap}
+.btn-wa {
+  display:inline-block; padding:17px 30px; border-radius:8px;
+  text-decoration:none; font-weight:bold; font-size:16px;
+}
+.btn-wa{border:4px solid var(--verde); color: var(--verde); background:transparent}
+.btn-wa:hover{background: var(--verde); color: var(--blanco)}
+
+/* Items clicables en carrusel */
+.carrusel-productos .item{position:relative;width:250px;flex:0 0 auto;display:block;text-decoration:none;color:inherit}
+.carrusel-productos .item img{width:100%;display:block}
+.carrusel-productos .item:focus-visible{outline:3px solid var(--rojo);outline-offset:4px}
+
+/* Etiqueta (ya usada para nombres) */
+.carrusel-productos .caption{
+  position:absolute;left:0;right:0;bottom:0;padding:8px 10px;
+  text-align:center;font-size:14px;font-weight:600;color:#060505;
+  background:linear-gradient(transparent,var(--cremaf) (29,29,29,.85));
+}
+
+/* BLANQUEADO-------------------------------------------------*/
+
+
+/* Fondo crema y texto oscuro en la página de producto */
+.prod-hero--cremaf{
+  background-color: var(--cremaf) !important;
+  color: var(--negro) !important;
+}
+.prod-hero{ margin-top: 40px; } /* espacio para que el Volver no se cruce */
+
+/* Colocar el botón Volver justo debajo del header, alineado a la izquierda */
+.navbar{ position: relative; } /* contenedor de referencia */
+.back-under-logo{
+  position: absolute;
+  left: 16px;
+  bottom: -36px;              /* aparece debajo del header */
+  background: rgba(0,0,0,.65);
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  z-index: 10;
+}
+.back-under-logo:hover{ background: rgba(0,0,0,.8); }
+
+/* Ajustes visuales del producto */
+.prod-hero .hero-img img{
+  width: 100%; max-width: 520px; height: auto;
+  border-radius: 12px; object-fit: contain;
+}
+.prod-info h1{ font-size: 42px; line-height: 1.2; margin: 0 0 8px; }
+.prod-info p{ font-size: 18px; margin: 0 0 10px; }
+.prod-meta{ margin: 10px 0 18px 18px; }
+
+/* Responsive */
+@media (max-width: 860px){
+  .prod-hero{ margin-top: 48px; }
+  .back-under-logo{ bottom: -44px; }
+  .prod-info h1{ font-size: 32px; }
+}
+
+/* --- Página de producto Blanqueado --- */
+/* Fondo crema y texto oscuro (anula color heredado de .hero) */
+.prod-hero--cremaf{
+  background-color: var(--cremaf) !important;
+}
+.prod-hero--cremaf,
+.prod-hero--cremaf .hero-texto,
+.prod-hero--cremaf .hero-texto h1,
+.prod-hero--cremaf .hero-texto p,
+.prod-hero--cremaf .prod-meta,
+.prod-hero--cremaf .prod-meta li{
+  color: var(--negro) !important;
+}
+
+/* Botón WhatsApp visible fuera de la sección CTA global */
+.btn-wa{
+  display:inline-block;
+  background: var(--verde);
+  color:#fff;
+  text-decoration:none;
+  padding:12px 18px;
+  border-radius:8px;
+  font-weight:700;
+  margin-top:12px;
+}
+.btn-wa:hover{ filter: brightness(.95); }
+
+.prod-hero{
+  display: grid !important;
+  grid-template-columns: minmax(300px,520px) 1fr; /* img izquierda, texto derecha */
+  align-items: center;
+  column-gap: 32px;
+  row-gap: 16px;
+  padding: 60px 40px;
+}
+.prod-hero .hero-img{ order: 1; }
+.prod-hero .prod-info{ order: 2; }
+
+/* En móviles, que se apile vertical */
+@media (max-width: 900px){
+  .prod-hero{
+    grid-template-columns: 1fr;
+    padding: 32px 16px;
+  }
+}
+
+
+
+/* Ajuste global para títulos y bloque derecho de producto */
+.prod-info{
+  max-width: 720px !important;
+  margin: 0 auto !important;
+  text-align: left !important;
+}
+.prod-hero .prod-info h1{
+  text-align: left !important;
+  margin: 0 0 12px !important;
+}
+
+
+
+/*----------------------------------------------------------------------*/
+
+/*RESPONSIVO*/
+
+/* ====== Base responsive ====== */
+img{max-width:100%;height:auto}
+
+/* Layout generales */
+.container{max-width:1200px;margin:0 auto;padding:0 16px}
+
+/* Navbar ajustes */
+.navbar{padding:16px 20px}
+.nav-menu{gap:20px}
+
+/* Carrusel: item y caption (si no los tienes ya) */
+.carrusel-productos .item{
+  width:250px;flex:0 0 250px;display:flex;flex-direction:column;
+  align-items:center;text-decoration:none;color:inherit
+}
+.carrusel-productos .caption{
+  margin-top:8px;font-size:16px;text-align:center
+}
+
+/* CTA WhatsApp */
+.cta-wa{padding:40px 16px;text-align:center;background:var(--cremaf)}
+.cta-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn-wa{padding:12px 18px;border-radius:8px;display:inline-block}
+
+/* Producto detalle */
+.prod-hero{display:flex;align-items:center;gap:32px;padding:40px 20px}
+.prod-hero--cremaf{background:var(--cremaf)}
+.prod-hero .hero-img{flex:0 1 520px}
+.prod-hero .prod-info{flex:1;max-width:720px}
+.prod-info h1{text-align:center}       /* Título centrado */
+.prod-info p,.prod-info ul{text-align:left}
+
+/* ====== Breakpoints ====== */
+
+/* <= 1024px (tablet horizontal) */
+@media (max-width:1024px){
+  .hero{gap:20px;padding:48px 20px}
+  .hero-texto h1{font-size:38px}
+  .carrusel-productos{gap:24px}
+  .carrusel-productos .item{width:220px;flex-basis:220px}
+}
+
+/* <= 768px (tablet/phone) */
+@media (max-width:768px){
+  .nav-menu{gap:14px}
+  .hero{flex-direction:column;align-items:center;text-align:center}
+  .hero-texto h1{font-size:30px;max-width:640px}
+  .hero-img img{max-width:520px;border-radius:12px}
+
+  /* Carrusel: más compacto */
+  .carrusel-productos{gap:18px}
+  .carrusel-productos .item{width:190px;flex-basis:190px}
+  .carrusel-flecha{font-size:22px;padding:8px}
+
+  .descripcion-empresa{padding:40px 16px}
+  .contenedor-descripcion p{font-size:18px}
+
+  /* Producto detalle apilado */
+  .prod-hero{flex-direction:column;align-items:center;text-align:left}
+  .prod-hero .hero-img{width:100%;max-width:520px}
+  .prod-info{max-width:720px;width:100%}
+}
+
+/* <= 480px (teléfono) */
+@media (max-width:480px){
+  .navbar{padding:12px 14px}
+  .logo-container img{height:44px}
+  .logo-texto{font-size:18px}
+  .hero-texto h1{font-size:24px}
+  .carrusel-productos{gap:14px}
+  .carrusel-productos .item{width:160px;flex-basis:160px}
+  .carrusel-flecha{padding:6px;font-size:20px}
+  .btn-wa{width:100%;text-align:center}
+  .carrusel-productos .caption{font-size:14px}
+}
+
+
+/* ===== Tamaño uniforme de tarjetas e imágenes del carrusel ===== */
+:root{
+  --card-w: clamp(180px, 22vw, 260px);   /* ancho de cada tarjeta */
+  --thumb-h: clamp(160px, 22vw, 220px);  /* alto de la imagen dentro de la tarjeta */
+  --carrusel-gap: 30px;                  /* misma separación que usas en el carrusel */
+}
+
+/* La tarjeta (el <a class="item">) ocupa siempre el mismo ancho */
+.hero-carrusel .item{
+  flex: 0 0 var(--card-w);
+  width: var(--card-w);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TODAS las imágenes caben en una “caja” de igual alto */
+.hero-carrusel .item img{
+  width: 100%;
+  height: var(--thumb-h);    /* <- iguala el alto */
+  object-fit: contain;       /* no recorta, ajusta dentro de la caja */
+  display: block;
+}
+
+/* (Opcional) uniforma las leyendas y evita saltos de altura */
+.hero-carrusel .item .caption{
+  min-height: 2.6em;         /* da la misma altura a los títulos */
+  line-height: 1.3;
+  text-align: center;
+  font-weight: 700;
+}
+
+
+/*---------------------------------------------------------------------------------------------------*/
+/* === FIX FINAL: separar títulos de las imágenes + tarjetas uniformes === */
+.carrusel-productos .item{
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  width: var(--card-w);
+  flex: 0 0 var(--card-w);
+  gap: clamp(10px, 1.4vw, 18px);   /* espacio entre imagen y título */
+}
+
+.carrusel-productos .item img{
+  width: 100%;
+  height: var(--thumb-h);          /* alto uniforme */
+  object-fit: contain;
+  display: block;                  /* elimina espacio fantasma debajo del img */
+}
+
+.carrusel-productos .caption{
+  position: static !important;     /* anula el absolute anterior */
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.25;
+  min-height: 2.6em;               /* títulos con misma altura (evita “saltos”) */
+  color: #060505;
+}
+
+
+/*----------------------------------------------------------------*/
+.carrusel-flecha[disabled]{
+  opacity:.35;
+  cursor: default;
+  pointer-events: none;
+}
+
+
+/* Botón de WhatsApp más grande solo en la tarjeta de contacto */
+.contacto .contact-cta .btn-wa{
+  font-size: 20px;          /* antes ~16px */
+  padding: 16px 28px;       /* antes 12px 18px */
+  border-radius: 14px;      /* un poco más redondo */
+  min-width: 280px;         /* ancho mínimo cómodo */
+  box-shadow: 0 8px 18px rgba(85,163,36,.25);
+  letter-spacing: .2px;
+}
+.contacto .contact-cta .btn-wa:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(85,163,36,.3);
+}
+
+/* En móviles: que ocupe todo el ancho del card */
+@media (max-width: 880px){
+  .contacto .contact-cta .btn-wa{
+    width: 100%;
+    font-size: 18px;
+    padding: 16px 22px;
+    min-width: 0;
+  }
+}
+
+/* ======= CONTACTO ======= */
+.contacto{
+  background: var(--cremaf);
+  padding: 28px 16px 56px;
+}
+.contacto .wrap{ max-width: 1200px; margin: 0 auto; }
+.contacto .sub{
+  font-size: 28px;
+  text-align: center;
+  margin: 0 0 22px;
+  color: var(--negro);
+}
+
+/* Grid principal: dos columnas arriba, CTA abajo ocupa todo */
+.contacto .contact-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px,1fr));
+  gap: 24px;
+  align-items: stretch; /* igual altura */
+}
+
+/* Tarjetas (Correos / Ubicación) */
+.contacto .contact-card{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.05);
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.contacto .contact-card header{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.contacto .contact-icon{
+  width: 42px; height: 42px; border-radius: 50%;
+  display: inline-grid; place-items: center;
+  color: #fff; background: var(--rojo);
+  box-shadow: 0 8px 18px rgba(85,163,36,.25);
+}
+.contacto .contact-card h3{
+  font-size: 20px; margin: 0; color: var(--negro);
+}
+
+/* Lista de correos */
+.email-list{ list-style: none; display: grid; gap: 14px; margin-top: 4px; }
+.email-item{
+  display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center;
+  border-top: 1px dashed rgba(0,0,0,.08);
+  padding-top: 12px;
+}
+.email-item:first-child{ border-top: none; padding-top: 0; }
+.email-item a{ color: var(--negro); font-weight: 600; text-decoration: none; }
+.copy-btn{
+  border: 1px solid rgba(0,0,0,.1);
+  background: #fff; padding: 8px 12px; border-radius: 8px; cursor: pointer;
+}
+.copy-btn:hover{ background: rgba(0,0,0,.04); }
+
+/* Dirección */
+.addr{ font-size: 18px; line-height: 1.6; margin: 8px 0 0; }
+
+/* CTA WhatsApp ocupa toda la fila */
+.contacto .contact-cta{
+  grid-column: 1 / -1;
+  background: linear-gradient(180deg, #f5fff0 0%, #ffffff 100%);
+  border: 1px solid rgba(85,163,36,.18);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(85,163,36,.12);
+  padding: 28px 24px;
+  text-align: center;
+  display: grid;
+  gap: 14px;
+  align-items: center;
+  justify-items: center;
+}
+.contacto .contact-cta h3{ font-size: 22px; margin: 0; color: var(--negro); }
+.contacto .desk-time{ margin: 6px 0 0; color: #333; }
+
+/* Botón WA grande y llamativo */
+.contacto .contact-cta .btn-wa{
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 10px;
+  font-size: 20px;
+  padding: 16px 28px;
+  border-radius: 14px;
+  min-width: 320px;
+  background: var(--verde);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 8px 18px rgba(85,163,36,.25);
+  letter-spacing: .2px;
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+}
+.contacto .contact-cta .btn-wa:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(85,163,36,.30);
+  filter: saturate(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .contacto .contact-grid{
+    grid-template-columns: 1fr;
+  }
+  .contacto .contact-cta .btn-wa{
+    width: 100%;
+    min-width: 0;
+    font-size: 18px;
+    padding: 16px 22px;
+  }
+}
+  /*-------------------------------------------------------------------------------------*/
+
+  /* === Mejores targets táctiles y feedback === */
+:root{ --tap: 44px; }
+button, .btn-wa, .copy-btn, .carrusel-flecha, .nav-menu a{
+  min-width: var(--tap);
+  min-height: var(--tap);
+}
+*{ -webkit-tap-highlight-color: transparent; }
+
+/* Gesto cómodo en carrusel */
+.hero-carrusel{
+  touch-action: pan-y;
+  overscroll-behavior-x: contain;
+}
+
+/* Flechas estilo “vidrio” (opción B) – sobrescribe estilos anteriores */
+:root{
+  --arrow-size: 46px;
+  --arrow-bg: rgba(0,0,0,.55);
+  --arrow-bg-hover: var(--rojo);
+  --arrow-color: #fff;
+  --arrow-shadow: 0 8px 18px rgba(0,0,0,.22);
+}
+.carrusel-flecha{
+  width: var(--arrow-size);
+  height: var(--arrow-size);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: var(--arrow-bg);
+  color: var(--arrow-color);
+  box-shadow: var(--arrow-shadow);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background-color .2s ease, transform .12s ease, opacity .2s ease;
+}
+.carrusel-flecha:hover{ background: var(--arrow-bg-hover); transform: scale(1.04); }
+.carrusel-flecha:active{ transform: scale(.98); }
+.carrusel-flecha.is-disabled{ opacity:.35; pointer-events:none; }
+
+/* FAB WhatsApp (solo móvil) */
+.wa-fab{
+  position: fixed; right:16px; bottom:16px; z-index:9999;
+  width:60px; height:60px; border-radius:999px;
+  display:grid; place-items:center;
+  background: var(--verde); color:#fff; text-decoration:none; border:none;
+  box-shadow: 0 14px 28px rgba(0,0,0,.25);
+}
+@media (min-width: 900px){ .wa-fab{ display:none; } }
+
+/* Ajustes pequeños para pantallas táctiles */
+@media (pointer: coarse){
+  .nav-menu a{ padding: 12px 8px; }
+  .copy-btn{ padding: 12px 16px; }
+}

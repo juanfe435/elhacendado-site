@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>El Hacendado</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Dulces típicos antioqueños: gelatina de pata, blanqueados, panelitas, jaleas, cocadas y más. El Hacendado — sabor auténtico y tradición." />
+  <!-- Color de la barra del navegador en móvil -->
+  <meta name="theme-color" content="#55A324">
+
+  <!-- Preload de la imagen principal del héroe -->
+  <link rel="preload" as="image" href="img/equipo.png" imagesrcset="img/equipo.png 1x" imagesizes="(max-width: 900px) 100vw, 50vw">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Estilo de flechas SVG (opción B) -->
+  <style>
+    :root{
+      --arrow-size: 46px;
+      --arrow-bg: rgba(0,0,0,.55);
+      --arrow-bg-hover: var(--rojo, #CF2D0C);
+      --arrow-color: #fff;
+      --arrow-shadow: 0 8px 18px rgba(0,0,0,.22);
+    }
+    .hero-carrusel{ position: relative; }
+    .carrusel-flecha{
+      width: var(--arrow-size);
+      height: var(--arrow-size);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.25);
+      background: var(--arrow-bg);
+      color: var(--arrow-color);
+      box-shadow: var(--arrow-shadow);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      cursor: pointer;
+      user-select: none;
+      transition: background-color .2s ease, transform .12s ease, opacity .2s ease;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+    .carrusel-flecha.izquierda{ left: 10px; }
+    .carrusel-flecha.derecha{ right: 10px; }
+    .carrusel-flecha:hover{ background: var(--arrow-bg-hover); transform: translateY(-50%) scale(1.04); }
+    .carrusel-flecha:active{ transform: translateY(-50%) scale(.98); }
+    .carrusel-flecha:focus-visible{ outline: 3px solid rgba(255,255,255,.9); outline-offset: 2px; }
+    .carrusel-flecha.is-disabled{ opacity: .35; pointer-events: none; }
+
+    .carrusel-flecha svg{ width: 62%; height: 62%; display:block; }
+    @media (max-width: 768px){
+      :root{ --arrow-size: 54px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="img/logobl.png" alt="Logo El Hacendado" width="140" height="48" decoding="async">
+      <span class="logo-texto">El Hacendado</span>
+    </div>
+    <nav aria-label="Principal">
+      <ul class="nav-menu">
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="hero-texto">
+      <h1>Descubre el sabor auténtico de nuestros productos artesanales</h1>
+      <p class="hero-sub">
+        La empresa El Hacendado es especialista en elaborar dulces típicos antioqueños como: gelatina de pata, blanqueado, panelitas, queso dulce y jaleas.
+        Hechos artesanalmente con ingredientes naturales para mayoristas y al detal.
+      </p>
+    </div>
+    <div class="hero-img">
+      <img src="img/planta trab.png"
+           alt="Planta de producción El Hacendado"
+           width="1200" height="800"
+           fetchpriority="high">
+    </div>
+  </main>
+
+  <!-- Carrusel de productos 1 -->
+  <section class="galeria-productos" id="productos" aria-label="Catálogo de productos">
+    <div class="hero-carrusel multiple" id="carrusel-container">
+      <button class="carrusel-flecha izquierda"
+              type="button"
+              aria-label="Ver productos anteriores"
+              aria-controls="carrusel"
+              onclick="moverCarrusel(-1)">
+        <!-- Flecha IZQ SVG -->
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15.5 19 8.5 12l7-7"
+                fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <div class="carrusel-productos" id="carrusel" role="list">
+        <a class="item" href="DescProductos/Blanqueado.html" role="listitem" aria-label="Ver Blanqueado">
+          <img src="img/BlanqueadoBandeja.png" alt="Blanqueado" loading="lazy" decoding="async" width="640" height="480">
+          <div class="caption">Blanqueado</div>
+        </a>
+
+        <a class="item" href="DescProductos/Jaleade240.html" role="listitem" aria-label="Ver Gelatina Negra Redonda Mediana">
+          <img src="img/Jalearedonda240.png" alt="Gelatina Negra Redonda Mediana" loading="lazy" decoding="async" width="640" height="480">
+          <div class="caption">Gelatina Negra Redonda Mediana</div>
+        </a>
+
+        <a class="item" href="DescProductos/GelatinaBlanca.html" role="listitem" aria-label="Ver Gelatina Blanca">
+          <img src="img/GelatinaBlanca180.png" alt="Gelatina Blanca" loading="lazy" decoding="async" width="640" height="480">
+          <div class="caption">Gelatina Blanca</div>
+        </a>
+
+        <a class="item" href="DescProductos/jaleade360.html" role="listitem" aria-label="Ver Gelatina Negra Redonda Grande">
+          <img src="img/Jalearedonda360.png" alt="Gelatina Negra Redonda Grande" loading="lazy" decoding="async" width="640" height="480">
+          <div class="caption">Gelatina Negra Redonda Grande</div>
+        </a>
+
+        <a class="item" href="DescProductos/JaleaCaja.html" role="listitem" aria-label="Ver Gelatina Negra Caja">
+          <img src="img/JaleaCaja.png" alt="Gelatina Negra Caja" loading="lazy" decoding="async" width="640" height="480">
+          <div class="caption">Gelatina Negra caja</div>
+        </a>
+
+        <a class="item" href="DescProductos/QuesoDulce.html" role="listitem" aria-label="Ver Queso Dulce">
+          <img src="img/QuesoDulceBandeja.png" alt="Queso Dulce" loading="lazy" decoding="async" width="640" height="480">
+          <div class="caption">Queso Dulce</div>
+        </a>
+
+        <a class="item" href="DescProductos/GelatinaBlancaCaja.html" role="listitem" aria-label="Ver Gelatina Blanca Caja Ecológica">
+          <img src="img/GelatinaBlancaEcologica.png" alt="Gelatina Blanca Caja Ecológica" loading="lazy" decoding="async" width="640" height="480">
+          <div class="caption">Gelatina Blanca Caja Ecológica</div>
+        </a>
+
+        <a class="item" href="DescProductos/PanelitaBlanca.html" role="listitem" aria-label="Ver Panelita Blanca">
+          <img src="img/PanelaLecheBlanca.png" alt="Panelita Blanca" loading="lazy" decoding="async" width="640" height="480">
+          <div class="caption">Panelita Blanca</div>
+        </a>
+
+        <a class="item" href="DescProductos/PanelitaCafe.html" role="listitem" aria-label="Ver Panelita Café">
+          <img src="img/PanelitaCafe.png" alt="Panelita Café" loading="lazy" decoding="async" width="640" height="480">
+          <div class="caption">Panelita Café</div>
+        </a>
+      </div>
+
+      <button class="carrusel-flecha derecha"
+              type="button"
+              aria-label="Ver productos siguientes"
+              aria-controls="carrusel"
+              onclick="moverCarrusel(1)">
+        <!-- Flecha DER SVG -->
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8.5 5 15.5 12 8.5 19"
+                fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Carrusel de productos 2 -->
+  <section class="galeria-productos" id="catalogo" aria-label="Presentación individual">
+    <div class="hero-carrusel multiple">
+      <button class="carrusel-flecha izquierda"
+              type="button"
+              aria-label="Ver productos anteriores"
+              aria-controls="carrusel2"
+              onclick="moverCarrusel2(-1)">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M15.5 19 8.5 12l7-7"
+                fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <div class="carrusel-productos" id="carrusel2" role="list">
+        <a class="item" href="DescProductosInd/Blanqueadoind.html" role="listitem" aria-label="Ver Blanqueado individual">
+          <img src="img/Blanqueadoindividual.png" alt="Blanqueado individual" loading="lazy" decoding="async" width="640" height="480">
+          <div class="caption">Blanqueado</div>
+        </a>
+
+        <a class="item" href="DescProductosInd/Jaleaind.html" role="listitem" aria-label="Ver Gelatina Negra individual">
+          <img src="img/JaleaIndividual.png" alt="Gelatina Negra individual" loading="lazy" decoding="async" width="640" height="480">
+          <div class="caption">Gelatina Negra</div>
+        </a>
+
+        <a class="item" href="DescProductosInd/GelatinaBlancaind.html" role="listitem" aria-label="Ver Gelatina Blanca individual">
+          <img src="img/GelatinaBlancaIndividual.png" alt="Gelatina Blanca individual" loading="lazy" decoding="async" width="640" height="480">
+          <div class="caption">Gelatina Blanca</div>
+        </a>
+
+        <a class="item" href="DescProductosInd/QuesoDulceind.html" role="listitem" aria-label="Ver Queso Dulce individual">
+          <img src="img/QuesoDulceIndividual.png" alt="Queso Dulce individual" loading="lazy" decoding="async" width="640" height="480">
+          <div class="caption">Queso Dulce</div>
+        </a>
+
+        <a class="item" href="DescProductosInd/PanelaCafeind.html" role="listitem" aria-label="Ver Panelita Café individual">
+          <img src="img/PanelitaCafeIndividual.png" alt="Panelita Café individual" loading="lazy" decoding="async" width="640" height="480">
+          <div class="caption">Panelita Café</div>
+        </a>
+
+        <a class="item" href="DescProductosInd/PanelitaBlancaind.html" role="listitem" aria-label="Ver Panelita Blanca individual">
+          <img src="img/panelitaBlancaindividual.png" alt="Panelita Blanca individual" loading="lazy" decoding="async" width="640" height="480">
+          <div class="caption">Panelita Blanca</div>
+        </a>
+      </div>
+
+      <button class="carrusel-flecha derecha"
+              type="button"
+              aria-label="Ver productos siguientes"
+              aria-controls="carrusel2"
+              onclick="moverCarrusel2(1)">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M8.5 5 15.5 12 8.5 19"
+                fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- CTA WhatsApp (sin id para evitar duplicado con #contacto) -->
+  <section class="cta-wa" aria-label="Contacto por WhatsApp">
+ <!-- ===== CONTACTO ===== -->
+<style>
+  /* scroll suave al hacer clic en Contacto */
+  html{ scroll-behavior: smooth; }
+
+  .contacto{
+    background: var(--cremaf);
+    padding: 56px 24px 72px;
+  }
+  .contacto .wrap{
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  .contacto h2{
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--negro);
+  }
+  .contacto .sub{
+    text-align: center;
+    color: var(--negro);
+    opacity: .8;
+    margin-bottom: 26px;
+  }
+
+  .contact-grid{
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;   /* izquierda: tarjetas; derecha: CTA */
+    gap: 24px;
+    align-items: start;
+  }
+
+  .cards{
+    display: grid;
+    gap: 18px;
+  }
+  .contact-card{
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 16px;
+    box-shadow: 0 10px 22px rgba(0,0,0,.06);
+    padding: 18px 18px 16px 18px;
+  }
+  .contact-card header{
+    display: flex; align-items: center; gap: 12px; margin-bottom: 8px;
+  }
+  .contact-icon{
+    width: 42px; height: 42px; border-radius: 999px;
+    display: inline-flex; align-items: center; justify-content: center;
+    color:#fff; background: var(--rojo);
+    box-shadow: 0 6px 12px rgba(207,45,12,.28);
+  }
+  .contact-card h3{ margin:0; font-size: 20px; }
+
+  .email-list, .addr{
+    list-style: none; padding: 0; margin: 8px 0 0;
+  }
+  .email-item{
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 10px; padding: 10px 0; border-top: 1px dashed rgba(0,0,0,.08);
+  }
+  .email-item:first-child{ border-top: 0; }
+
+  .email-item a{
+    color: var(--negro); text-decoration: none; font-weight: 600;
+    word-break: break-all;
+  }
+  .copy-btn{
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 6px 10px; border-radius: 8px; background: #fff; cursor: pointer;
+    font-size: 13px; color: var(--negro);
+    transition: background .15s ease, transform .05s ease;
+  }
+  .copy-btn:hover{ background: rgba(0,0,0,.04); }
+  .copy-btn:active{ transform: scale(.98); }
+
+  .map-actions{ margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn-outline, .btn-solid{
+    display:inline-block; padding: 10px 14px; border-radius: 10px; font-weight: 700;
+    text-decoration: none; font-size: 14px;
+  }
+  .btn-outline{
+    border: 2px solid var(--verde); color: var(--verde); background: transparent;
+  }
+  .btn-outline:hover{ background: var(--verde); color: #fff; }
+  .btn-solid{
+    background: var(--rojo); color: #fff; border: 2px solid var(--rojo);
+  }
+  .btn-solid:hover{ filter: brightness(.96); }
+
+  /* Lado derecho (CTA WhatsApp) */
+  .contact-cta{
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 16px;
+    box-shadow: 0 10px 22px rgba(0,0,0,.06);
+    padding: 22px 18px;
+    text-align: center;
+  }
+  .contact-cta h3{ margin: 0 0 6px; font-size: 22px; }
+  .contact-cta p{ margin: 0 0 14px; color: var(--negro); opacity:.85; }
+
+  .contact-cta .btn-wa{
+    margin-top: 4px;
+    display:inline-block; padding: 12px 18px; border-radius: 10px;
+    background: var(--verde); color: #fff; font-weight: 800;
+    text-decoration: none; border: 2px solid var(--verde);
+  }
+  .contact-cta .btn-wa:hover{ filter: brightness(.95); }
+
+  .contact-cta small{ display:block; margin-top: 10px; opacity:.8; }
+
+  /* Responsive */
+  @media (max-width: 880px){
+    .contact-grid{ grid-template-columns: 1fr; }
+  }
+</style>
+
+<section class="contacto" id="contacto" aria-label="Información de contacto">
+  <div class="wrap">
+    <h1 class="sub"><strong>Escríbenos. ¡Te responderemos muy rápido!</strong></h1>
+
+    <!-- GRID principal: 2 columnas arriba (correos + ubicación) y 1 fila completa abajo (WhatsApp) -->
+    <div class="contact-grid">
+
+      <!-- Correos -->
+      <article class="contact-card" aria-labelledby="t-correos">
+        <header>
+          <span class="contact-icon" aria-hidden="true">
+            <!-- sobre -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2" />
+              <path d="m4 6 8 6 8-6" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+          </span>
+          <h3 id="t-correos">Correos electrónicos</h3>
+        </header>
+
+        <ul class="email-list">
+          <li class="email-item">
+            <a href="mailto:gerencia@elhacendado.com.co">gerencia@elhacendado.com.co</a>
+            <button class="copy-btn" type="button" data-copy="gerencia@elhacendado.com.co"><strong>Copiar</strong></button>
+          </li>
+          <li class="email-item">
+            <a href="mailto:administracion@elhacendado.com.co">administracion@elhacendado.com.co</a>
+            <button class="copy-btn" type="button" data-copy="administracion@elhacendado.com.co"><strong>Copiar</strong></button>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Ubicación -->
+      <aside class="contact-card" aria-labelledby="t-ubicacion">
+        <header>
+          <span class="contact-icon" aria-hidden="true" style="background: var(--rojo)">
+            <!-- pin -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"
+                    stroke="currentColor" stroke-width="2"/>
+              <circle cx="12" cy="10" r="2.8" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </span>
+          <h3 id="t-ubicacion">Ubicación</h3>
+        </header>
+
+        <p class="addr">
+          <strong>Derivados de la Caña El Hacendado <br>- <br> Medellín, Antioquia, Colombia</strong> 
+        </p>
+      </aside>
+
+      <!-- WhatsApp: ocupa todo el ancho de la grid -->
+      <article class="contact-cta">
+        <h3>¿Necesitas ayuda inmediata?</h3>
+        <p>Atendemos por WhatsApp.</p>
+
+        <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido.">
+          <!-- ícono WA opcional -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-3px;margin-right:10px">
+            <path d="M20.52 3.48A11.87 11.87 0 0 0 12.06 0 12 12 0 0 0 0 12a11.87 11.87 0 0 0 3.48 8.52A11.87 11.87 0 0 0 12 24a12 12 0 0 0 12-12 11.87 11.87 0 0 0-3.48-8.52ZM12 22a9.93 9.93 0 0 1-5.28-1.52l-3.16.84.84-3.16A10 10 0 1 1 22 12 9.94 9.94 0 0 1 12 22Zm5.18-6.6c-.28-.14-1.67-.82-1.93-.91s-.45-.14-.64.14-.73.91-.91 1.1-.33.21-.61.07a8.18 8.18 0 0 1-2.41-1.49 9.04 9.04 0 0 1-1.67-2.06c-.17-.28 0-.43.13-.57s.28-.32.42-.49a1.9 1.9 0 0 0 .28-.49.52.52 0 0 0 0-.49c0-.14-.64-1.53-.87-2.09s-.46-.48-.64-.49h-.55a1.06 1.06 0 0 0-.76.35 3.19 3.19 0 0 0-1 2.35 5.56 5.56 0 0 0 1.17 2.53 12.78 12.78 0 0 0 4.83 4.26c.67.29 1.2.46 1.6.59a3.85 3.85 0 0 0 1.76.11 2.87 2.87 0 0 0 1.88-1.31 2.37 2.37 0 0 0 .17-1.31c-.07-.18-.26-.25-.54-.39Z"/>
+          </svg>
+          Hablar por WhatsApp
+        </a>
+
+        <p class="desk-time"><strong>Horario: De Lunes a Viernes 7:00 a.m. – 4:00 p.m.</strong></p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<script>
+  // Copiar email al portapapeles
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(btn.dataset.copy);
+        const txt = btn.textContent;
+        btn.textContent = '¡Copiado!';
+        setTimeout(()=> btn.textContent = txt, 1200);
+      } catch (e) { console.warn('No se pudo copiar'); }
+    });
+  });
+</script>
+<!-- ===== FIN CONTACTO ===== -->
+
+
+  </section>
+
+  <section class="descripcion-empresa">
+    <div class="contenedor-descripcion">
+      <br><br>
+      <h2 class="titulo-descripcion">Derivados de la Caña El Hacendado</h2>
+      <p class="texto-descripcion">
+        Somos la empresa encargada de fabricar con orgullo dulces típicos antioqueños como gelatina de pata, blanqueados, panelitas, jaleas, cocadas y mucho más. Nuestros productos conservan el sabor auténtico de la tradición colombiana, hechos con ingredientes naturales y pasión artesanal.
+      </p>
+    </div>
+  </section>
+
+  <!-- Carruseles responsivos (ajuste anti-hueco + flechas desactivables) -->
+  <script>
+    // Tamaño de paso: ancho de item + gap
+    function getStep(carr){
+      if(!carr) return 280;
+      const item = carr.querySelector('.item') || carr.children[0];
+      const itemWidth = item ? item.getBoundingClientRect().width : 250;
+      const styles = getComputedStyle(carr);
+      const gap = parseFloat(styles.columnGap || styles.gap || 30) || 30;
+      return itemWidth + gap;
+    }
+
+    // Máximo desplazamiento del track, compensando padding-right del contenedor
+    function getMaxScroll(track){
+      const cont = track?.parentElement;
+      if(!track || !cont) return 0;
+      const cs = getComputedStyle(cont);
+      const pr = parseFloat(cs.paddingRight) || 0;
+      return Math.max(0, track.scrollWidth - (cont.clientWidth - pr));
+    }
+
+    // Cálculo de visibles usando ancho util (clientWidth - padding-right)
+    function countVisible(carr){
+      if(!carr) return 1;
+      const step = getStep(carr);
+      const cont = carr.parentElement;
+      const cs = getComputedStyle(cont);
+      const pr = parseFloat(cs.paddingRight) || 0;
+      const usable = Math.max(1, cont.clientWidth - pr);
+      const vis = Math.max(1, Math.floor(usable / step));
+      return Math.min(4, vis);
+    }
+
+    // Marcar flechas enabled/disabled
+    function setArrowsState(container, idx, maxIdx){
+      const prev = container.querySelector('.carrusel-flecha.izquierda');
+      const next = container.querySelector('.carrusel-flecha.derecha');
+      const atStart = idx <= 0;
+      const atEnd   = idx >= maxIdx;
+      prev?.classList.toggle('is-disabled', atStart);
+      next?.classList.toggle('is-disabled', atEnd);
+      prev?.setAttribute('aria-disabled', String(atStart));
+      next?.setAttribute('aria-disabled', String(atEnd));
+    }
+
+    // Carrusel 1
+    let index = 0;
+    const carrusel = document.getElementById("carrusel");
+    function moverCarrusel(direccion) {
+      if(!carrusel) return;
+      const container = document.getElementById('carrusel-container');
+      const total = carrusel.children.length;
+      const visibles = countVisible(carrusel);
+      const maxIndex = Math.max(0, total - visibles);
+      index = Math.min(Math.max(index + direccion, 0), maxIndex);
+
+      const step = getStep(carrusel);
+      const maxScroll = getMaxScroll(carrusel);
+      const offset = Math.min(index * step, maxScroll);
+      carrusel.style.transform = `translateX(-${offset}px)`;
+
+      setArrowsState(container, index, maxIndex);
+    }
+
+    // Carrusel 2
+    let index2 = 0;
+    const carrusel2 = document.getElementById("carrusel2");
+    function moverCarrusel2(dir) {
+      if(!carrusel2) return;
+      const container2 = carrusel2.parentElement;
+      const total2 = carrusel2.children.length;
+      const visibles2 = countVisible(carrusel2);
+      const maxIndex2 = Math.max(0, total2 - visibles2);
+      index2 = Math.min(Math.max(index2 + dir, 0), maxIndex2);
+
+      const step2 = getStep(carrusel2);
+      const maxScroll2 = getMaxScroll(carrusel2);
+      const offset2 = Math.min(index2 * step2, maxScroll2);
+      carrusel2.style.transform = `translateX(-${offset2}px)`;
+
+      setArrowsState(container2, index2, maxIndex2);
+    }
+
+    // Recalcular al cargar y redimensionar para que no quede hueco
+    function recalcular(){
+      moverCarrusel(0);
+      moverCarrusel2(0);
+    }
+    window.addEventListener('load', recalcular);
+    window.addEventListener('resize', recalcular);
+  </script>
+
+  <!-- WhatsApp dinámico -->
+  <script>
+    const WA_NUMBER = '573147443294';
+    document.querySelectorAll('.btn-wa').forEach(a => {
+      const msg = a.dataset.msg || 'Hola';
+      a.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+      a.target = '_blank';
+      a.rel = 'noopener';
+    });
+  </script>
+
+  <!-- Swipe (touch) en carruseles: solo táctil y sin interferir clic en PC -->
+  <script>
+    (function(){
+      function attachSwipe(track, onLeft, onRight){
+        if(!track) return;
+        let startX=null, moved=false, dx=0, wasSwipe=false;
+        const THR=40;
+
+        track.addEventListener('pointerdown', e=>{
+          if(e.pointerType!=='touch') return;
+          startX=e.clientX; dx=0; moved=false; wasSwipe=false;
+        }, {passive:true});
+
+        track.addEventListener('pointermove', e=>{
+          if(startX===null || e.pointerType!=='touch') return;
+          dx=e.clientX-startX;
+          if(Math.abs(dx)>6) moved=true;
+        }, {passive:true});
+
+        track.addEventListener('pointerup', e=>{
+          if(startX===null || e.pointerType!=='touch') return;
+          if(Math.abs(dx)>THR){
+            (dx<0 ? onRight() : onLeft());
+            wasSwipe=true;
+          }
+          startX=null; moved=false; dx=0;
+        }, {passive:true});
+
+        // Evita abrir enlaces si fue un gesto de swipe
+        track.addEventListener('click', e=>{
+          if(wasSwipe){ e.preventDefault(); wasSwipe=false; }
+        }, true);
+      }
+
+      attachSwipe(document.getElementById('carrusel'),  ()=>moverCarrusel(-1),  ()=>moverCarrusel(1));
+      attachSwipe(document.getElementById('carrusel2'), ()=>moverCarrusel2(-1), ()=>moverCarrusel2(1));
+    })();
+  </script>
+
+</body>
+</html>

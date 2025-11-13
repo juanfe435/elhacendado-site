@@ -1,0 +1,160 @@
+<!-- DescProductos/Blanqueado.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blanqueado | El Hacendado</title>
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- Ajustes carrusel + fondo crema -->
+  <style>
+    .prod-hero{display:grid;grid-template-columns:minmax(300px,520px) 1fr;align-items:center;gap:32px;padding:60px 40px}
+    @media (max-width:900px){.prod-hero{grid-template-columns:1fr;padding:32px 16px}}
+    .prod-hero--cremaf{background:var(--cremaf)}
+
+    .prod-gallery{position:relative;width:100%;max-width:520px}
+    .pgal-viewport{overflow:hidden;border-radius:12px;background:var(--cremaf)} /* sin fondo blanco */
+    .pgal-track{display:flex;transition:transform .35s ease}
+    .pgal-track img{width:100%;flex:0 0 100%;height:auto;object-fit:contain;display:block}
+
+    .pgal-arrow{
+      position:absolute;top:50%;transform:translateY(-50%);
+      width:44px;height:44px;border:0;border-radius:999px;
+      background:rgba(0,0,0,.6);color:#fff;cursor:pointer;z-index:5; /* arriba y clickeable */
+    }
+    .pgal-arrow.left{left:12px}
+    .pgal-arrow.right{right:12px}
+    .pgal-arrow:hover{background:rgba(0,0,0,.8)}
+
+    .pgal-dots{display:flex;gap:6px;justify-content:center;margin-top:8px}
+    .pgal-dots button{width:8px;height:8px;border-radius:999px;border:0;cursor:pointer;background:#999;opacity:.6}
+    .pgal-dots button[aria-selected="true"]{opacity:1;background:#333}
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="../img/logobl.png" alt="Logo El Hacendado">
+      <span class="logo-texto">El Hacendado</span>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="../index.html#productos">Productos</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <a href="../index.html" class="back-under-logo" aria-label="Volver">← Volver</a>
+  </header>
+
+  <section class="hero prod-hero prod-hero--cremaf">
+    <!-- Carrusel -->
+    <div class="prod-gallery" id="pgal">
+      <button class="pgal-arrow left" aria-label="Anterior">❮</button>
+      <div class="pgal-viewport">
+        <div class="pgal-track">
+          <img src="../img/PanelitaCafeIndividual.png" alt="PanelitaCafe ind- vista 1">
+          <img src="../img/PanelitaCafeIndividual.png" alt="PanelitaCafe - vista 2">
+          
+        </div>
+      </div>
+      <button class="pgal-arrow right" aria-label="Siguiente">❯</button>
+      <div class="pgal-dots" role="tablist" aria-label="Imágenes de PanelitaCafe ind"></div>
+    </div>
+
+    <!-- Info derecha -->
+    <div class="hero-texto prod-info">
+      <h1>Panelita Café</h1>
+      <p>
+            Elaboradas con azúcar, leche en polvo y coco fresco, nuestras panelitas se distinguen 
+            por su textura suave y delicada, realzada con un característico tono caramelo que refleja
+            su autenticidad. La fusión de sabores entre arequipe y coco las convierte en una verdadera 
+            exquisitez. Los trocitos de coco natural en su interior aportan frescura y una experiencia única, 
+            irresistibles para quienes buscan disfrutar del sabor más auténtico del coco.
+            <br><br>
+        
+            <strong>Disponibles tanto de manera individual como a granel</strong>
+      </p>
+      <ul class="prod-meta">
+        <li><strong>Peso:</strong> 20gr o 30gr </li>
+        <li><strong>Presentación:</strong> PP</li>
+        <li><strong>Cantidad:</strong> 1 Unidad</li>
+        <li><strong>Conservación:</strong> En Lugar seco y fresco</li>
+      </ul>
+      <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido.">
+           Haz tu pedido por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- JS carrusel -->
+  <script>
+  (function(){
+    const root = document.getElementById('pgal');
+    if(!root) return;
+    const viewport = root.querySelector('.pgal-viewport');
+    const track    = root.querySelector('.pgal-track');
+    const slides   = Array.from(track.children);
+    const prev     = root.querySelector('.pgal-arrow.left');
+    const next     = root.querySelector('.pgal-arrow.right');
+    const dotsBox  = root.querySelector('.pgal-dots');
+    let idx = 0;
+
+    function makeDots(){
+      dotsBox.innerHTML = '';
+      slides.forEach((_, i) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', `Ver imagen ${i+1}`);
+        b.addEventListener('click', ()=>{ idx = i; update(); });
+        dotsBox.appendChild(b);
+      });
+    }
+
+    function update(){
+      const w = viewport.clientWidth;
+      track.style.transform = `translateX(-${idx*w}px)`;
+      prev.disabled = (idx === 0);
+      next.disabled = (idx === slides.length - 1);
+      Array.from(dotsBox.children).forEach((b,i)=>
+        b.setAttribute('aria-selected', i===idx ? 'true' : 'false')
+      );
+    }
+
+    prev.addEventListener('click', ()=>{ if(idx>0){ idx--; update(); }});
+    next.addEventListener('click', ()=>{ if(idx<slides.length-1){ idx++; update(); }});
+
+    // Swipe
+    let startX=0, dragging=false;
+    viewport.addEventListener('pointerdown', e=>{ dragging=true; startX=e.clientX; viewport.setPointerCapture(e.pointerId); });
+    viewport.addEventListener('pointerup',   e=>{
+      if(!dragging) return;
+      const dx = e.clientX - startX;
+      if (dx > 40 && idx>0) idx--;
+      if (dx < -40 && idx<slides.length-1) idx++;
+      dragging=false; update();
+    });
+    viewport.addEventListener('pointercancel', ()=> dragging=false);
+
+    window.addEventListener('resize', update);
+
+    makeDots();
+    update();
+  })();
+  </script>
+
+  <!--CODIGO DE NUMERO WPP-->
+  <script>
+    const WA_NUMBER = '573147443294'; // tu número en formato internacional
+    document.querySelectorAll('.btn-wa').forEach(a => {
+      const msg = a.dataset.msg || 'Hola';
+      a.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+      a.target = '_blank';
+      a.rel = 'noopener';
+    });
+  </script>
+
+
+</body>
+</html>
