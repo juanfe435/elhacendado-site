@@ -30,8 +30,9 @@
       "https://www.facebook.com/",
       "https://www.instagram.com/"
     ],
-    "description": "Fabricantes de dulces típicos antioqueños: gelatina de pata, blanqueados, panelitas, jaleas y queso dulce. Productos artesanales al por mayor y al detal en Colombia."
-  }
+    "description": "Fabricantes de dulces típicos antioqueños: gelatina de pata, blanqueados, 
+    panelitas, jaleas y queso dulce. Productos artesanales al por mayor y al detal en Colombia."
+  }4
   </script>
 
   <!-- Preload de la imagen principal del héroe -->
@@ -257,214 +258,250 @@
     </div>
   </section>
 
+
+    <!-- Sección beneficios / por qué elegirnos -->
+  <section class="beneficios">
+    <div class="beneficios-wrap">
+      <h2>¿Por qué elegir los dulces típicos de El Hacendado?</h2>
+      <p class="beneficios-intro">
+        Llevamos años elaborando dulces típicos antioqueños con recetas tradicionales.
+        Nuestros clientes nos eligen porque ofrecemos:
+      </p>
+
+      <div class="beneficios-grid">
+        <article class="beneficio-item">
+          <h3>Productos 100% artesanales</h3>
+          <p>Fabricamos gelatina de pata, panelitas, blanqueados, cocadas y queso dulce con procesos manuales que cuidan cada detalle.</p>
+        </article>
+
+        <article class="beneficio-item">
+          <h3>Ingredientes de calidad</h3>
+          <p>Usamos materias primas seleccionadas para mantener el sabor auténtico de los dulces típicos antioqueños.</p>
+        </article>
+
+        <article class="beneficio-item">
+          <h3>Ventas al por mayor y al detal</h3>
+          <p>Atendemos tiendas, distribuidores, supermercados y negocios que quieren ofrecer productos tradicionales colombianos.</p>
+        </article>
+
+        <article class="beneficio-item">
+          <h3>Atención rápida y cercana</h3>
+          <p>Te asesoramos por WhatsApp para ayudarte a escoger las presentaciones y cantidades que necesitas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+
   <!-- CTA WhatsApp (sin id para evitar duplicado con #contacto) -->
   <section class="cta-wa" aria-label="Contacto por WhatsApp">
  <!-- ===== CONTACTO ===== -->
-<style>
-  /* scroll suave al hacer clic en Contacto */
-  html{ scroll-behavior: smooth; }
+  <style>
+    /* scroll suave al hacer clic en Contacto */
+    html{ scroll-behavior: smooth; }
 
-  .contacto{
-    background: var(--cremaf);
-    padding: 56px 24px 72px;
-  }
-  .contacto .wrap{
-    max-width: 1150px;
-    margin: 0 auto;
-  }
+    .contacto{
+      background: var(--cremaf);
+      padding: 56px 24px 72px;
+    }
+    .contacto .wrap{
+      max-width: 1150px;
+      margin: 0 auto;
+    }
 
-  .contacto h2{
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 10px;
-    color: var(--negro);
-  }
-  .contacto .sub{
-    text-align: center;
-    color: var(--negro);
-    opacity: .8;
-    margin-bottom: 26px;
-  }
+    .contacto h2{
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 10px;
+      color: var(--negro);
+    }
+    .contacto .sub{
+      text-align: center;
+      color: var(--negro);
+      opacity: .8;
+      margin-bottom: 26px;
+    }
 
-  .contact-grid{
-    display: grid;
-    grid-template-columns: 1.2fr .8fr;   /* izquierda: tarjetas; derecha: CTA */
-    gap: 24px;
-    align-items: start;
-  }
+    .contact-grid{
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;   /* izquierda: tarjetas; derecha: CTA */
+      gap: 24px;
+      align-items: start;
+    }
 
-  .cards{
-    display: grid;
-    gap: 18px;
-  }
-  .contact-card{
-    background: #fff;
-    border: 1px solid rgba(0,0,0,.06);
-    border-radius: 16px;
-    box-shadow: 0 10px 22px rgba(0,0,0,.06);
-    padding: 18px 18px 16px 18px;
-  }
-  .contact-card header{
-    display: flex; align-items: center; gap: 12px; margin-bottom: 8px;
-  }
-  .contact-icon{
-    width: 42px; height: 42px; border-radius: 999px;
-    display: inline-flex; align-items: center; justify-content: center;
-    color:#fff; background: var(--rojo);
-    box-shadow: 0 6px 12px rgba(207,45,12,.28);
-  }
-  .contact-card h3{ margin:0; font-size: 20px; }
+    .cards{
+      display: grid;
+      gap: 18px;
+    }
+    .contact-card{
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 16px;
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+      padding: 18px 18px 16px 18px;
+    }
+    .contact-card header{
+      display: flex; align-items: center; gap: 12px; margin-bottom: 8px;
+    }
+    .contact-icon{
+      width: 42px; height: 42px; border-radius: 999px;
+      display: inline-flex; align-items: center; justify-content: center;
+      color:#fff; background: var(--rojo);
+      box-shadow: 0 6px 12px rgba(207,45,12,.28);
+    }
+    .contact-card h3{ margin:0; font-size: 20px; }
 
-  .email-list, .addr{
-    list-style: none; padding: 0; margin: 8px 0 0;
-  }
-  .email-item{
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 10px; padding: 10px 0; border-top: 1px dashed rgba(0,0,0,.08);
-  }
-  .email-item:first-child{ border-top: 0; }
+    .email-list, .addr{
+      list-style: none; padding: 0; margin: 8px 0 0;
+    }
+    .email-item{
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 10px; padding: 10px 0; border-top: 1px dashed rgba(0,0,0,.08);
+    }
+    .email-item:first-child{ border-top: 0; }
 
-  .email-item a{
-    color: var(--negro); text-decoration: none; font-weight: 600;
-    word-break: break-all;
-  }
-  .copy-btn{
-    border: 1px solid rgba(0,0,0,.1);
-    padding: 6px 10px; border-radius: 8px; background: #fff; cursor: pointer;
-    font-size: 13px; color: var(--negro);
-    transition: background .15s ease, transform .05s ease;
-  }
-  .copy-btn:hover{ background: rgba(0,0,0,.04); }
-  .copy-btn:active{ transform: scale(.98); }
+    .email-item a{
+      color: var(--negro); text-decoration: none; font-weight: 600;
+      word-break: break-all;
+    }
+    .copy-btn{
+      border: 1px solid rgba(0,0,0,.1);
+      padding: 6px 10px; border-radius: 8px; background: #fff; cursor: pointer;
+      font-size: 13px; color: var(--negro);
+      transition: background .15s ease, transform .05s ease;
+    }
+    .copy-btn:hover{ background: rgba(0,0,0,.04); }
+    .copy-btn:active{ transform: scale(.98); }
 
-  .map-actions{ margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
-  .btn-outline, .btn-solid{
-    display:inline-block; padding: 10px 14px; border-radius: 10px; font-weight: 700;
-    text-decoration: none; font-size: 14px;
-  }
-  .btn-outline{
-    border: 2px solid var(--verde); color: var(--verde); background: transparent;
-  }
-  .btn-outline:hover{ background: var(--verde); color: #fff; }
-  .btn-solid{
-    background: var(--rojo); color: #fff; border: 2px solid var(--rojo);
-  }
-  .btn-solid:hover{ filter: brightness(.96); }
+    .map-actions{ margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn-outline, .btn-solid{
+      display:inline-block; padding: 10px 14px; border-radius: 10px; font-weight: 700;
+      text-decoration: none; font-size: 14px;
+    }
+    .btn-outline{
+      border: 2px solid var(--verde); color: var(--verde); background: transparent;
+    }
+    .btn-outline:hover{ background: var(--verde); color: #fff; }
+    .btn-solid{
+      background: var(--rojo); color: #fff; border: 2px solid var(--rojo);
+    }
+    .btn-solid:hover{ filter: brightness(.96); }
 
-  /* Lado derecho (CTA WhatsApp) */
-  .contact-cta{
-    background: #fff;
-    border: 1px solid rgba(0,0,0,.06);
-    border-radius: 16px;
-    box-shadow: 0 10px 22px rgba(0,0,0,.06);
-    padding: 22px 18px;
-    text-align: center;
-  }
-  .contact-cta h3{ margin: 0 0 6px; font-size: 22px; }
-  .contact-cta p{ margin: 0 0 14px; color: var(--negro); opacity:.85; }
+    /* Lado derecho (CTA WhatsApp) */
+    .contact-cta{
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 16px;
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+      padding: 22px 18px;
+      text-align: center;
+    }
+    .contact-cta h3{ margin: 0 0 6px; font-size: 22px; }
+    .contact-cta p{ margin: 0 0 14px; color: var(--negro); opacity:.85; }
 
-  .contact-cta .btn-wa{
-    margin-top: 4px;
-    display:inline-block; padding: 12px 18px; border-radius: 10px;
-    background: var(--verde); color: #fff; font-weight: 800;
-    text-decoration: none; border: 2px solid var(--verde);
-  }
-  .contact-cta .btn-wa:hover{ filter: brightness(.95); }
+    .contact-cta .btn-wa{
+      margin-top: 4px;
+      display:inline-block; padding: 12px 18px; border-radius: 10px;
+      background: var(--verde); color: #fff; font-weight: 800;
+      text-decoration: none; border: 2px solid var(--verde);
+    }
+    .contact-cta .btn-wa:hover{ filter: brightness(.95); }
 
-  .contact-cta small{ display:block; margin-top: 10px; opacity:.8; }
+    .contact-cta small{ display:block; margin-top: 10px; opacity:.8; }
 
-  /* Responsive */
-  @media (max-width: 880px){
-    .contact-grid{ grid-template-columns: 1fr; }
-  }
-</style>
+    /* Responsive */
+    @media (max-width: 880px){
+      .contact-grid{ grid-template-columns: 1fr; }
+    }
+  </style>
 
-<section class="contacto" id="contacto" aria-label="Información de contacto">
-  <div class="wrap">
-    <h1 class="sub"><strong>Escríbenos. ¡Te responderemos muy rápido!</strong></h1>
+  <section class="contacto" id="contacto" aria-label="Información de contacto">
+    <div class="wrap">
+      <h1 class="sub"><strong>Escríbenos. ¡Te responderemos muy rápido!</strong></h1>
 
-    <!-- GRID principal: 2 columnas arriba (correos + ubicación) y 1 fila completa abajo (WhatsApp) -->
-    <div class="contact-grid">
+      <!-- GRID principal: 2 columnas arriba (correos + ubicación) y 1 fila completa abajo (WhatsApp) -->
+      <div class="contact-grid">
 
-      <!-- Correos -->
-      <article class="contact-card" aria-labelledby="t-correos">
-        <header>
-          <span class="contact-icon" aria-hidden="true">
-            <!-- sobre -->
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2" />
-              <path d="m4 6 8 6 8-6" stroke="currentColor" stroke-width="2" fill="none"/>
+        <!-- Correos -->
+        <article class="contact-card" aria-labelledby="t-correos">
+          <header>
+            <span class="contact-icon" aria-hidden="true">
+              <!-- sobre -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2" />
+                <path d="m4 6 8 6 8-6" stroke="currentColor" stroke-width="2" fill="none"/>
+              </svg>
+            </span>
+            <h3 id="t-correos">Correos electrónicos</h3>
+          </header>
+
+          <ul class="email-list">
+            <li class="email-item">
+              <a href="mailto:gerencia@elhacendado.com.co">gerencia@elhacendado.com.co</a>
+              <button class="copy-btn" type="button" data-copy="gerencia@elhacendado.com.co"><strong>Copiar</strong></button>
+            </li>
+            <li class="email-item">
+              <a href="mailto:administracion@elhacendado.com.co">administracion@elhacendado.com.co</a>
+              <button class="copy-btn" type="button" data-copy="administracion@elhacendado.com.co"><strong>Copiar</strong></button>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Ubicación -->
+        <aside class="contact-card" aria-labelledby="t-ubicacion">
+          <header>
+            <span class="contact-icon" aria-hidden="true" style="background: var(--rojo)">
+              <!-- pin -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"
+                      stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="10" r="2.8" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </span>
+            <h3 id="t-ubicacion">Ubicación</h3>
+          </header>
+
+          <p class="addr">
+            <strong>Derivados de la Caña El Hacendado <br>- <br> Medellín, Antioquia, Colombia</strong> 
+          </p>
+        </aside>
+
+        <!-- WhatsApp: ocupa todo el ancho de la grid -->
+        <article class="contact-cta">
+          <h3>¿Necesitas ayuda inmediata?</h3>
+          <p>Atendemos por WhatsApp.</p>
+
+          <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido.">
+            <!-- ícono WA opcional -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-3px;margin-right:10px">
+              <path d="M20.52 3.48A11.87 11.87 0 0 0 12.06 0 12 12 0 0 0 0 12a11.87 11.87 0 0 0 3.48 8.52A11.87 11.87 0 0 0 12 24a12 12 0 0 0 12-12 11.87 11.87 0 0 0-3.48-8.52ZM12 22a9.93 9.93 0 0 1-5.28-1.52l-3.16.84.84-3.16A10 10 0 1 1 22 12 9.94 9.94 0 0 1 12 22Zm5.18-6.6c-.28-.14-1.67-.82-1.93-.91s-.45-.14-.64.14-.73.91-.91 1.1-.33.21-.61.07a8.18 8.18 0 0 1-2.41-1.49 9.04 9.04 0 0 1-1.67-2.06c-.17-.28 0-.43.13-.57s.28-.32.42-.49a1.9 1.9 0 0 0 .28-.49.52.52 0 0 0 0-.49c0-.14-.64-1.53-.87-2.09s-.46-.48-.64-.49h-.55a1.06 1.06 0 0 0-.76.35 3.19 3.19 0 0 0-1 2.35 5.56 5.56 0 0 0 1.17 2.53 12.78 12.78 0 0 0 4.83 4.26c.67.29 1.2.46 1.6.59a3.85 3.85 0 0 0 1.76.11 2.87 2.87 0 0 0 1.88-1.31 2.37 2.37 0 0 0 .17-1.31c-.07-.18-.26-.25-.54-.39Z"/>
             </svg>
-          </span>
-          <h3 id="t-correos">Correos electrónicos</h3>
-        </header>
+            Hablar por WhatsApp
+          </a>
 
-        <ul class="email-list">
-          <li class="email-item">
-            <a href="mailto:gerencia@elhacendado.com.co">gerencia@elhacendado.com.co</a>
-            <button class="copy-btn" type="button" data-copy="gerencia@elhacendado.com.co"><strong>Copiar</strong></button>
-          </li>
-          <li class="email-item">
-            <a href="mailto:administracion@elhacendado.com.co">administracion@elhacendado.com.co</a>
-            <button class="copy-btn" type="button" data-copy="administracion@elhacendado.com.co"><strong>Copiar</strong></button>
-          </li>
-        </ul>
-      </article>
+          <p class="desk-time"><strong>Horario: De Lunes a Viernes 7:00 a.m. – 4:00 p.m.</strong></p>
+        </article>
 
-      <!-- Ubicación -->
-      <aside class="contact-card" aria-labelledby="t-ubicacion">
-        <header>
-          <span class="contact-icon" aria-hidden="true" style="background: var(--rojo)">
-            <!-- pin -->
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"
-                    stroke="currentColor" stroke-width="2"/>
-              <circle cx="12" cy="10" r="2.8" stroke="currentColor" stroke-width="2"/>
-            </svg>
-          </span>
-          <h3 id="t-ubicacion">Ubicación</h3>
-        </header>
-
-        <p class="addr">
-          <strong>Derivados de la Caña El Hacendado <br>- <br> Medellín, Antioquia, Colombia</strong> 
-        </p>
-      </aside>
-
-      <!-- WhatsApp: ocupa todo el ancho de la grid -->
-      <article class="contact-cta">
-        <h3>¿Necesitas ayuda inmediata?</h3>
-        <p>Atendemos por WhatsApp.</p>
-
-        <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido.">
-          <!-- ícono WA opcional -->
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-3px;margin-right:10px">
-            <path d="M20.52 3.48A11.87 11.87 0 0 0 12.06 0 12 12 0 0 0 0 12a11.87 11.87 0 0 0 3.48 8.52A11.87 11.87 0 0 0 12 24a12 12 0 0 0 12-12 11.87 11.87 0 0 0-3.48-8.52ZM12 22a9.93 9.93 0 0 1-5.28-1.52l-3.16.84.84-3.16A10 10 0 1 1 22 12 9.94 9.94 0 0 1 12 22Zm5.18-6.6c-.28-.14-1.67-.82-1.93-.91s-.45-.14-.64.14-.73.91-.91 1.1-.33.21-.61.07a8.18 8.18 0 0 1-2.41-1.49 9.04 9.04 0 0 1-1.67-2.06c-.17-.28 0-.43.13-.57s.28-.32.42-.49a1.9 1.9 0 0 0 .28-.49.52.52 0 0 0 0-.49c0-.14-.64-1.53-.87-2.09s-.46-.48-.64-.49h-.55a1.06 1.06 0 0 0-.76.35 3.19 3.19 0 0 0-1 2.35 5.56 5.56 0 0 0 1.17 2.53 12.78 12.78 0 0 0 4.83 4.26c.67.29 1.2.46 1.6.59a3.85 3.85 0 0 0 1.76.11 2.87 2.87 0 0 0 1.88-1.31 2.37 2.37 0 0 0 .17-1.31c-.07-.18-.26-.25-.54-.39Z"/>
-          </svg>
-          Hablar por WhatsApp
-        </a>
-
-        <p class="desk-time"><strong>Horario: De Lunes a Viernes 7:00 a.m. – 4:00 p.m.</strong></p>
-      </article>
-
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<script>
-  // Copiar email al portapapeles
-  document.querySelectorAll('.copy-btn').forEach(btn => {
-    btn.addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText(btn.dataset.copy);
-        const txt = btn.textContent;
-        btn.textContent = '¡Copiado!';
-        setTimeout(()=> btn.textContent = txt, 1200);
-      } catch (e) { console.warn('No se pudo copiar'); }
+  <script>
+    // Copiar email al portapapeles
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(btn.dataset.copy);
+          const txt = btn.textContent;
+          btn.textContent = '¡Copiado!';
+          setTimeout(()=> btn.textContent = txt, 1200);
+        } catch (e) { console.warn('No se pudo copiar'); }
+      });
     });
-  });
-</script>
-<!-- ===== FIN CONTACTO ===== -->
+  </script>
+  <!-- ===== FIN CONTACTO ===== -->
 
 
   </section>
