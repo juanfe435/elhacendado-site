@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Evita indexar archivos sensibles o carpetas internas (si las hubiera)
+Disallow: /private/
+Disallow: /admin/
+Disallow: /tmp/
+
+# Sitemap principal
+Sitemap: https://elhacendado.com.co/sitemap.xml
+
