@@ -3,9 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gelatina Blanca | El Hacendado</title>
+
+  <!-- 🔥 TITLE SEO OPTIMIZADO -->
+  <title>Gelatina Blanca Ecológica | Colágeno natural | El Hacendado</title>
+
+  <!-- 🔥 META DESCRIPTION SEO -->
+  <meta name="description" content="Gelatina blanca ecológica elaborada con colágeno natural de pata de res y panela artesanal. Presentación en caja ecológica x7 unidades. Dulce típico colombiano saludable y artesanal.">
+
   <link rel="stylesheet" href="../style.css" />
- 
+
+  <!-- 🔥 SCHEMA PRODUCT (Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Gelatina Blanca Caja Ecológica",
+    "image": "https://elhacendado.com.co/img/GelatinaBlancaEcologica.png",
+    "description": "Gelatina blanca artesanal con colágeno natural de pata de res y panela. Presentación ecológica ideal para el cuidado de piel, cabello y uñas.",
+    "brand": {
+      "@type": "Brand",
+      "name": "El Hacendado"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://elhacendado.com.co/DescProductos/GelatinaBlancaEcologica.html",
+      "priceCurrency": "COP",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <!-- Estilos del producto -->
   <style>
     .prod-hero{display:grid;grid-template-columns:minmax(300px,520px) 1fr;align-items:center;gap:32px;padding:60px 40px}
     @media (max-width:900px){.prod-hero{grid-template-columns:1fr;padding:32px 16px}}
@@ -22,15 +50,14 @@
       width:44px;height:44px;border:0;border-radius:999px;
       background:rgba(0,0,0,.6);color:#fff;cursor:pointer;z-index:5;
     }
-    .pgal-arrow.left{left:12px} .pgal-arrow.right{right:12px}
+    .pgal-arrow.left{left:12px} 
+    .pgal-arrow.right{right:12px}
     .pgal-arrow:hover{background:rgba(0,0,0,.8)}
 
     .pgal-dots{display:flex;gap:6px;justify-content:center;margin-top:8px}
     .pgal-dots button{width:8px;height:8px;border-radius:999px;border:0;cursor:pointer;background:#999;opacity:.6}
     .pgal-dots button[aria-selected="true"]{opacity:1;background:#333}
   </style>
-
-    
 
 </head>
 <body>
@@ -50,46 +77,63 @@
   </header>
 
   <section class="hero prod-hero prod-hero--cremaf">
-    <!-- Carrusel izquierda -->
+
+    <!-- Carrusel -->
     <div class="prod-gallery" id="pgal">
       <button class="pgal-arrow left" aria-label="Anterior">❮</button>
       <div class="pgal-viewport">
         <div class="pgal-track">
-          <img src="../img/GelatinaBlancaEcologica.png" alt="Gelatina Blanca Ecologica vista 1">
-          <img src="../img/GelatinaBlancaEcologica.png" alt="Gelatina Blanca Ecologica- vista 2">
-          <img src="../img/GelatinaBlancaEcologica.png" alt="Gelatina Blanca Ecologica - vista 3">
+          <img src="../img/GelatinaBlancaEcologica.png" alt="Gelatina Blanca Caja Ecológica - vista 1">
+          <img src="../img/GelatinaBlancaEcologica.png" alt="Gelatina Blanca Caja Ecológica - vista 2">
+          <img src="../img/GelatinaBlancaEcologica.png" alt="Gelatina Blanca Caja Ecológica - vista 3">
         </div>
       </div>
       <button class="pgal-arrow right" aria-label="Siguiente">❯</button>
-      <div class="pgal-dots" role="tablist" aria-label="Imágenes de Gelatina Blanca Ecologica"></div>
+      <div class="pgal-dots" role="tablist" aria-label="Imágenes de Gelatina Blanca Caja Ecológica"></div>
     </div>
 
-    <!-- Info derecha -->
+    <!-- Info -->
     <div class="hero-texto prod-info">
+      
       <h1>Gelatina Blanca Caja Ecológica</h1>
+
+      <!-- 🔥 SUBTÍTULO SEO -->
+      <h2>Dulce artesanal con colágeno natural, en empaque ecológico</h2>
+
       <p>
-            Nuestras gelatinas blancas están elaboradas con pata de res de la más alta calidad, obteniendo colágeno 
-            puro y natural reconocido por sus propiedades regenerativas y antienvejecimiento. Contribuyen al cuidado 
-            de la piel, el cabello y las uñas, al tiempo que aportan vitaminas y calcio de forma natural. Al fusionar 
-            valioso ingrediente con nuestra panela artesanal logramos una gelatina suave, dulce, con un auténtico aroma
-            a melado, fácil de digerir y libre de colesterol, grasas saturadas y grasas trans.
-            <br><br>
-            Además, vienen presentadas en una caja ecológica y atractiva, pensada para proteger el medio ambiente y resaltar la 
-            calidad del producto. Una opción deliciosa, saludable y responsable con el planeta, perfecta para disfrutar como postre o
-            como complemento en batidos de colágeno.
+        Nuestras gelatinas blancas están elaboradas con pata de res de la más alta calidad, obteniendo colágeno 
+        puro y natural reconocido por sus propiedades regenerativas y antienvejecimiento. Contribuyen al cuidado 
+        de la piel, el cabello y las uñas, al tiempo que aportan vitaminas y calcio de forma natural.
+        <br><br>
+        Al fusionar este valioso ingrediente con nuestra panela artesanal logramos una gelatina suave, dulce, con un 
+        auténtico aroma a melado, fácil de digerir y libre de colesterol y grasas trans.
+        <br><br>
+        Su presentación en caja ecológica resalta la calidad del producto y aporta una opción sostenible y atractiva  
+        para tiendas, mercados saludables y proyectos eco-amigables.
       </p>
+
       <ul class="prod-meta">
         <li><strong>Peso Neto:</strong> 210gr</li>
         <li><strong>Presentación:</strong> Caja Ecológica - PP</li>
         <li><strong>Cantidad:</strong> 7 Unidades</li>
         <li><strong>Conservación:</strong> Lugar fresco y seco</li>
       </ul>
-        <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido.">
-                Haz tu pedido por WhatsApp
-        </a>
+
+      <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido de Gelatina Blanca Caja Ecológica.">
+        Haz tu pedido por WhatsApp
+      </a>
+
+      <!-- 🔥 EXTRA SEO -->
+      <p class="seo-extra" style="margin-top:20px; opacity:.85;">
+        La Gelatina Blanca Caja Ecológica es ideal para distribuidores, tiendas saludables, mercados artesanales y negocios que buscan 
+        opciones sostenibles con alto contenido de colágeno natural. También contamos con gelatina de pata tradicional, panelitas, 
+        blanqueados, jaleas y otros dulces típicos colombianos elaborados de manera artesanal.
+      </p>
+
     </div>
   </section>
 
+  <!-- JS del Carrusel -->
   <script>
   (function(){
     const root = document.getElementById('pgal');
@@ -139,9 +183,9 @@
   })();
   </script>
 
-  <!--CODIGO DE NUMERO WPP-->
+  <!-- WhatsApp -->
   <script>
-    const WA_NUMBER = '573147443294'; // tu número en formato internacional
+    const WA_NUMBER = '573147443294';
     document.querySelectorAll('.btn-wa').forEach(a => {
       const msg = a.dataset.msg || 'Hola';
       a.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;

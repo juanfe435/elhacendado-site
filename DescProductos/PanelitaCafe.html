@@ -1,10 +1,39 @@
+<!-- DescProductos/PanelitaCafeCaja.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gelatina Negra Redonda Grande | El Hacendado</title>
+
+  <!-- 🔥 TITLE SEO OPTIMIZADO -->
+  <title>Panelita café de coco con leche 240gr | Dulces típicos colombianos | El Hacendado</title>
+
+  <!-- 🔥 META DESCRIPTION SEO -->
+  <meta name="description" content="Panelita café elaborada con azúcar, leche en polvo y coco fresco. Textura suave y sabor tipo arequipe con coco. Presentación en caja Sello Plus 240gr, ideal para dulces típicos colombianos.">
+
   <link rel="stylesheet" href="../style.css" />
+
+  <!-- 🔥 SCHEMA PRODUCT (Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Panelita Café Caja",
+    "image": "https://elhacendado.com.co/img/PanelitaCafe.png",
+    "description": "Panelita café de coco con leche, de textura suave y sabor tipo arequipe con coco. Presentación en caja Sello Plus 240gr, ideal para tiendas y distribuidores de dulces típicos colombianos.",
+    "brand": {
+      "@type": "Brand",
+      "name": "El Hacendado"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://elhacendado.com.co/DescProductos/PanelitaCafeCaja.html",
+      "priceCurrency": "COP",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
   <style>
     .prod-hero{display:grid;grid-template-columns:minmax(300px,520px) 1fr;align-items:center;gap:32px;padding:60px 40px}
     @media (max-width:900px){.prod-hero{grid-template-columns:1fr;padding:32px 16px}}
@@ -53,34 +82,47 @@
       <button class="pgal-arrow left" aria-label="Anterior">❮</button>
       <div class="pgal-viewport">
         <div class="pgal-track">
-          <img src="../img/PanelitaCafe.png" alt="PanelitaCafe - vista 1">
-          <img src="../img/PanelitaCafe.png" alt="PanelitaCafe - vista 2">
-          <img src="../img/PanelitaCafe.png" alt="PanelitaCafe - vista 3">
+          <img src="../img/PanelitaCafe.png" alt="Panelita Café Caja - vista 1">
+          <img src="../img/PanelitaCafe.png" alt="Panelita Café Caja - vista 2">
+          <img src="../img/PanelitaCafe.png" alt="Panelita Café Caja - vista 3">
         </div>
       </div>
       <button class="pgal-arrow right" aria-label="Siguiente">❯</button>
-      <div class="pgal-dots" role="tablist" aria-label="Imágenes de PanelitaCafe"></div>
+      <div class="pgal-dots" role="tablist" aria-label="Imágenes de Panelita Café Caja"></div>
     </div>
 
     <!-- Info derecha -->
     <div class="hero-texto prod-info">
       <h1>Panelita Café Caja</h1>
+
+      <!-- 🔥 SUBTÍTULO SEO -->
+      <h2>Panelita de coco con leche, sabor tipo arequipe</h2>
+
       <p>
-            Elaboradas con azúcar, leche en polvo y coco fresco, nuestras panelitas se distinguen 
-            por su textura suave y delicada, realzada con un característico tono caramelo que refleja
-            su autenticidad. La fusión de sabores entre arequipe y coco las convierte en una verdadera 
-            exquisitez. Los trocitos de coco natural en su interior aportan frescura y una experiencia única, 
-            irresistibles para quienes buscan disfrutar del sabor más auténtico del coco.
+        Elaboradas con azúcar, leche en polvo y coco fresco, nuestras panelitas se distinguen 
+        por su textura suave y delicada, realzada con un característico tono caramelo que refleja
+        su autenticidad. La fusión de sabores entre arequipe y coco las convierte en una verdadera 
+        exquisitez. Los trocitos de coco natural en su interior aportan frescura y una experiencia única, 
+        irresistibles para quienes buscan disfrutar del sabor más auténtico del coco.
       </p>
+
       <ul class="prod-meta">
         <li><strong>Peso Neto:</strong> 240gr</li>
         <li><strong>Presentación:</strong> Sello Plus</li>
         <li><strong>Cantidad:</strong> 12 Unidades</li>
         <li><strong>Conservación:</strong> Lugar fresco y seco</li>
       </ul>
-      <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido.">
+
+      <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido de Panelita Café Caja.">
            Haz tu pedido por WhatsApp
       </a>
+
+      <!-- 🔥 EXTRA SEO -->
+      <p class="seo-extra" style="margin-top:20px; opacity:.85;">
+        La Panelita Café Caja de El Hacendado es ideal para tiendas de barrio, supermercados, cafeterías y proyectos de repostería 
+        que desean ofrecer un dulce típico colombiano con notas de arequipe y coco. También contamos con panelita blanca, 
+        gelatina de pata, blanqueados y otros dulces artesanales elaborados con ingredientes seleccionados de la región antioqueña.
+      </p>
     </div>
   </section>
 
@@ -135,7 +177,7 @@
 
   <!--CODIGO DE NUMERO WPP-->
   <script>
-    const WA_NUMBER = '573147443294'; // tu número en formato internacional
+    const WA_NUMBER = '573147443294';
     document.querySelectorAll('.btn-wa').forEach(a => {
       const msg = a.dataset.msg || 'Hola';
       a.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;

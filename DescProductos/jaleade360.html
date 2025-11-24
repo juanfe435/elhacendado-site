@@ -1,10 +1,39 @@
+<!-- DescProductos/Jaleade360.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gelatina Negra Redonda Grande | El Hacendado</title>
+
+  <!-- 🔥 TITLE SEO OPTIMIZADO -->
+  <title>Gelatina negra de pata de res 360gr | Dulce típico colombiano | El Hacendado</title>
+
+  <!-- 🔥 META DESCRIPTION SEO -->
+  <meta name="description" content="Gelatina negra redonda grande de 360gr elaborada con colágeno natural de pata de res y panela artesanal. Presentación en base espumada con vinipel, ideal para postres y batidos de colágeno.">
+
   <link rel="stylesheet" href="../style.css" />
+
+  <!-- 🔥 SCHEMA PRODUCT (Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Gelatina Negra Redonda Grande",
+    "image": "https://elhacendado.com.co/img/Jalearedonda360.png",
+    "description": "Gelatina negra redonda grande de 360gr elaborada con colágeno natural de pata de res y panela artesanal, ideal para el cuidado de piel, cabello y uñas.",
+    "brand": {
+      "@type": "Brand",
+      "name": "El Hacendado"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://elhacendado.com.co/DescProductos/Jaleade360.html",
+      "priceCurrency": "COP",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
   <style>
     .prod-hero{display:grid;grid-template-columns:minmax(300px,520px) 1fr;align-items:center;gap:32px;padding:60px 40px}
     @media (max-width:900px){.prod-hero{grid-template-columns:1fr;padding:32px 16px}}
@@ -65,23 +94,36 @@
     <!-- Info derecha -->
     <div class="hero-texto prod-info">
       <h1>Gelatina Negra Redonda Grande</h1>
+
+      <!-- 🔥 SUBTÍTULO SEO -->
+      <h2>Gelatina de colágeno natural de pata de res con panela artesanal</h2>
+
       <p>
-            Nuestras gelatinas están elaboradas con pata de res de la más alta calidad, 
-            obteniendo colágeno puro y natural reconocido por sus propiedades regenerativas 
-            y antienvejecimiento. Ayuda al cuidado de la piel, el cabello y las uñas, mientras 
-            aporta vitaminas y calcio de manera natural. Al combinarlo con panela artesanal logramos 
-            una gelatina suave, dulce, con aroma auténtico a melado, fácil de digerir y libre de colesterol,
-            grasas saturadas y grasas trans. Una opción deliciosa y saludable para disfrutar como postre o en batidos de colágeno.
+        Nuestras gelatinas están elaboradas con pata de res de la más alta calidad, 
+        obteniendo colágeno puro y natural reconocido por sus propiedades regenerativas 
+        y antienvejecimiento. Ayuda al cuidado de la piel, el cabello y las uñas, mientras 
+        aporta vitaminas y calcio de manera natural. Al combinar este valioso ingrediente con panela artesanal logramos 
+        una gelatina suave, dulce, con aroma auténtico a melado, fácil de digerir y libre de colesterol,
+        grasas saturadas y grasas trans. Una opción deliciosa y saludable para disfrutar como postre o en batidos de colágeno.
       </p>
+
       <ul class="prod-meta">
         <li><strong>Peso Neto:</strong> 360gr</li>
         <li><strong>Presentación:</strong> Base Espumada - Vinipel</li>
         <li><strong>Cantidad:</strong> 1 Unidad</li>
         <li><strong>Conservación:</strong> En nevera</li>
       </ul>
-      <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido.">
-           Haz tu pedido por WhatsApp
+
+      <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido de Gelatina Negra Redonda Grande.">
+        Haz tu pedido por WhatsApp
       </a>
+
+      <!-- 🔥 EXTRA SEO -->
+      <p class="seo-extra" style="margin-top:20px; opacity:.85;">
+        La Gelatina Negra Redonda Grande es ideal para familias, tiendas de barrio, restaurantes y negocios que buscan ofrecer un 
+        postre típico colombiano con alto contenido de colágeno natural. En El Hacendado también encuentras presentaciones medianas, 
+        gelatina blanca, panelitas, blanqueados y otros dulces tradicionales a base de panela y caña de la región antioqueña.
+      </p>
     </div>
   </section>
 
@@ -136,7 +178,7 @@
 
   <!--CODIGO DE NUMERO WPP-->
   <script>
-    const WA_NUMBER = '573147443294'; // tu número en formato internacional
+    const WA_NUMBER = '573147443294';
     document.querySelectorAll('.btn-wa').forEach(a => {
       const msg = a.dataset.msg || 'Hola';
       a.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;

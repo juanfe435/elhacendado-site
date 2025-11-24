@@ -1,10 +1,39 @@
+<!-- DescProductos/QuesoDulceBandeja.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gelatina Negra Redonda Grande | El Hacendado</title>
+
+  <!-- 🔥 TITLE SEO OPTIMIZADO -->
+  <title>Queso dulce en bandeja 240gr | Dulces típicos colombianos | El Hacendado</title>
+
+  <!-- 🔥 META DESCRIPTION SEO -->
+  <meta name="description" content="Queso dulce artesanal elaborado con azúcar y leche, de textura firme por fuera y suave por dentro. Presentación en bandeja 240gr, ideal para tiendas, cafeterías y amantes de los dulces típicos colombianos.">
+
   <link rel="stylesheet" href="../style.css" />
+
+  <!-- 🔥 SCHEMA PRODUCT (Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Queso Dulce Bandeja",
+    "image": "https://elhacendado.com.co/img/QuesoDulceBandeja.png",
+    "description": "Queso dulce artesanal elaborado con azúcar y leche, de textura firme por fuera y suave por dentro. Presentación en bandeja 240gr, ideal como dulce típico colombiano.",
+    "brand": {
+      "@type": "Brand",
+      "name": "El Hacendado"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://elhacendado.com.co/DescProductos/QuesoDulceBandeja.html",
+      "priceCurrency": "COP",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
   <style>
     .prod-hero{display:grid;grid-template-columns:minmax(300px,520px) 1fr;align-items:center;gap:32px;padding:60px 40px}
     @media (max-width:900px){.prod-hero{grid-template-columns:1fr;padding:32px 16px}}
@@ -53,34 +82,47 @@
       <button class="pgal-arrow left" aria-label="Anterior">❮</button>
       <div class="pgal-viewport">
         <div class="pgal-track">
-          <img src="../img/QuesoDulceBandeja.png" alt="QuesoDulceBandeja - vista 1">
-          <img src="../img/QuesoDulceBandeja.png" alt="QuesoDulceBandeja - vista 2">
-          <img src="../img/QuesoDulceBandeja.png" alt="QuesoDulceBandeja - vista 3">
+          <img src="../img/QuesoDulceBandeja.png" alt="Queso Dulce Bandeja - vista 1">
+          <img src="../img/QuesoDulceBandeja.png" alt="Queso Dulce Bandeja - vista 2">
+          <img src="../img/QuesoDulceBandeja.png" alt="Queso Dulce Bandeja - vista 3">
         </div>
       </div>
       <button class="pgal-arrow right" aria-label="Siguiente">❯</button>
-      <div class="pgal-dots" role="tablist" aria-label="Imágenes de QuesoDulceBandeja"></div>
+      <div class="pgal-dots" role="tablist" aria-label="Imágenes de Queso Dulce Bandeja"></div>
     </div>
 
     <!-- Info derecha -->
     <div class="hero-texto prod-info">
       <h1>Queso Dulce Bandeja</h1>
+
+      <!-- 🔥 SUBTÍTULO SEO -->
+      <h2>Dulce tipo queso artesanal con sabor a caramelo y leche</h2>
+
       <p>
-            Elaborado con esmero a base de azúcar y leche, este dulce combina de manera perfecta 
-            el sabor del caramelo con la suavidad de la leche, evocando lo más auténtico de lo tradicional 
-            y casero. Su textura, firme al exterior y suave en el interior, ofrece un contraste irresistible 
-            que deleita al paladar. Cada bocado es una experiencia única donde lo cremoso se encuentra con lo crocante, 
-            ideal para quienes buscan un dulce artesanal, con carácter y sabor inconfundible.
+        Elaborado con esmero a base de azúcar y leche, este dulce combina de manera perfecta 
+        el sabor del caramelo con la suavidad de la leche, evocando lo más auténtico de lo tradicional 
+        y casero. Su textura, firme al exterior y suave en el interior, ofrece un contraste irresistible 
+        que deleita al paladar. Cada bocado es una experiencia única donde lo cremoso se encuentra con lo crocante, 
+        ideal para quienes buscan un dulce artesanal, con carácter y sabor inconfundible.
       </p>
+
       <ul class="prod-meta">
         <li><strong>Peso Neto:</strong> 240gr</li>
         <li><strong>Presentación:</strong> Base Espumada - Termoencogible</li>
         <li><strong>Cantidad:</strong> 12 Unidades</li>
-        <li><strong>Conservación:</strong> En Lugar seco y fresco</li>
+        <li><strong>Conservación:</strong> Lugar seco y fresco</li>
       </ul>
-      <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido.">
+
+      <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido de Queso Dulce Bandeja.">
            Haz tu pedido por WhatsApp
       </a>
+
+      <!-- 🔥 EXTRA SEO -->
+      <p class="seo-extra" style="margin-top:20px; opacity:.85;">
+        El Queso Dulce Bandeja de El Hacendado es ideal para tiendas de barrio, supermercados, cafeterías y negocios que desean 
+        ofrecer un dulce típico colombiano con sabor casero. También contamos con panelitas de coco, gelatina de pata, blanqueados 
+        y otros dulces artesanales elaborados con ingredientes seleccionados de la región antioqueña.
+      </p>
     </div>
   </section>
 
@@ -135,7 +177,7 @@
 
   <!--CODIGO DE NUMERO WPP-->
   <script>
-    const WA_NUMBER = '573147443294'; // tu número en formato internacional
+    const WA_NUMBER = '573147443294';
     document.querySelectorAll('.btn-wa').forEach(a => {
       const msg = a.dataset.msg || 'Hola';
       a.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;

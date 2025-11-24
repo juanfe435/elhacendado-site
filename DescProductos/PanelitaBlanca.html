@@ -1,10 +1,39 @@
+<!-- DescProductos/PanelitaBlancaCaja.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gelatina Negra Redonda Grande | El Hacendado</title>
+
+  <!-- 🔥 TITLE SEO OPTIMIZADO -->
+  <title>Panelita blanca de coco con leche 240gr | Dulces típicos colombianos | El Hacendado</title>
+
+  <!-- 🔥 META DESCRIPTION SEO -->
+  <meta name="description" content="Panelita blanca elaborada con azúcar, leche en polvo y coco fresco. Textura cremosa y sabor suave ideal para tiendas, distribuidores y amantes de los dulces típicos colombianos. Presentación en caja Sello Plus.">
+
   <link rel="stylesheet" href="../style.css" />
+
+  <!-- 🔥 SCHEMA PRODUCT (Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Panelita Blanca Caja",
+    "image": "https://elhacendado.com.co/img/PanelaLecheBlanca.png",
+    "description": "Panelita blanca elaborada con azúcar, leche en polvo y coco fresco, de textura cremosa y sabor suave. Presentación en caja Sello Plus, ideal para dulces típicos colombianos.",
+    "brand": {
+      "@type": "Brand",
+      "name": "El Hacendado"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://elhacendado.com.co/DescProductos/PanelitaBlancaCaja.html",
+      "priceCurrency": "COP",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
   <style>
     .prod-hero{display:grid;grid-template-columns:minmax(300px,520px) 1fr;align-items:center;gap:32px;padding:60px 40px}
     @media (max-width:900px){.prod-hero{grid-template-columns:1fr;padding:32px 16px}}
@@ -53,33 +82,46 @@
       <button class="pgal-arrow left" aria-label="Anterior">❮</button>
       <div class="pgal-viewport">
         <div class="pgal-track">
-          <img src="../img/PanelaLecheBlanca.png" alt="PanelaLecheBlanca - vista 1">
-          <img src="../img/PanelaLecheBlanca.png" alt="PanelaLecheBlanca - vista 2">
-          <img src="../img/PanelaLecheBlanca.png" alt="PanelaLecheBlanca - vista 3">
+          <img src="../img/PanelaLecheBlanca.png" alt="Panelita Blanca Caja - vista 1">
+          <img src="../img/PanelaLecheBlanca.png" alt="Panelita Blanca Caja - vista 2">
+          <img src="../img/PanelaLecheBlanca.png" alt="Panelita Blanca Caja - vista 3">
         </div>
       </div>
       <button class="pgal-arrow right" aria-label="Siguiente">❯</button>
-      <div class="pgal-dots" role="tablist" aria-label="Imágenes de PanelaLecheBlanca"></div>
+      <div class="pgal-dots" role="tablist" aria-label="Imágenes de Panelita Blanca Caja"></div>
     </div>
 
     <!-- Info derecha -->
     <div class="hero-texto prod-info">
       <h1>Panelita Blanca Caja</h1>
+
+      <!-- 🔥 SUBTÍTULO SEO -->
+      <h2>Panelita de coco con leche, sabor suave y textura cremosa</h2>
+
       <p>
         Elaborada con azúcar, leche en polvo y abundante coco fresco, esta panelita destaca por su delicado tono 
         blanco que transmite pureza y frescura. Su sabor suave y cremoso logra un equilibrio perfecto entre la dulzura 
         de la leche y la naturalidad del coco. Los trocitos de coco en su interior aportan una textura única, haciendo de 
         cada bocado una experiencia ligera, deliciosa y refrescante, ideal para quienes disfrutan de sabores más finos y sofisticados.
       </p>
+
       <ul class="prod-meta">
         <li><strong>Peso Neto:</strong> 240gr</li>
         <li><strong>Presentación:</strong> Sello Plus</li>
         <li><strong>Cantidad:</strong> 11 Unidades</li>
         <li><strong>Conservación:</strong> Lugar fresco y seco</li>
       </ul>
-      <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido.">
+
+      <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido de Panelita Blanca Caja.">
            Haz tu pedido por WhatsApp
       </a>
+
+      <!-- 🔥 EXTRA SEO -->
+      <p class="seo-extra" style="margin-top:20px; opacity:.85;">
+        La Panelita Blanca Caja de El Hacendado es perfecta para tiendas de barrio, supermercados, cafeterías y proyectos gourmet 
+        que buscan ofrecer un dulce típico colombiano con un toque delicado y cremoso. También contamos con panelitas de coco tradicionales, 
+        gelatina de pata, blanqueados y otros dulces artesanales elaborados con ingredientes seleccionados de la región antioqueña.
+      </p>
     </div>
   </section>
 
@@ -134,7 +176,7 @@
 
   <!--CODIGO DE NUMERO WPP-->
   <script>
-    const WA_NUMBER = '573147443294'; // tu número en formato internacional
+    const WA_NUMBER = '573147443294';
     document.querySelectorAll('.btn-wa').forEach(a => {
       const msg = a.dataset.msg || 'Hola';
       a.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
