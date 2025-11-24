@@ -3,9 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gelatina Blanca | El Hacendado</title>
+
+  <!-- 🔥 TITLE SEO OPTIMIZADO -->
+  <title>Gelatina blanca de pata de res | Colágeno natural | El Hacendado</title>
+
+  <!-- 🔥 META DESCRIPTION SEO -->
+  <meta name="description" content="Gelatina blanca elaborada con colágeno natural de pata de res y panela artesanal. Dulce típico colombiano ideal para piel, cabello y uñas. Presentación 180gr, paquete x6 unidades.">
+
   <link rel="stylesheet" href="../style.css" />
- 
+
+  <!-- 🔥 SCHEMA PRODUCT (para Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Gelatina Blanca Paquete",
+    "image": "https://elhacendado.com.co/img/GelatinaBlanca180.png",
+    "description": "Gelatina blanca elaborada con colágeno natural de pata de res y panela artesanal. Dulce típico colombiano ideal para el cuidado de piel, cabello y uñas.",
+    "brand": {
+      "@type": "Brand",
+      "name": "El Hacendado"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://elhacendado.com.co/DescProductos/GelatinaBlanca.html",
+      "priceCurrency": "COP",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <!-- Ajustes carrusel + fondo crema -->
   <style>
     .prod-hero{display:grid;grid-template-columns:minmax(300px,520px) 1fr;align-items:center;gap:32px;padding:60px 40px}
     @media (max-width:900px){.prod-hero{grid-template-columns:1fr;padding:32px 16px}}
@@ -29,9 +57,6 @@
     .pgal-dots button{width:8px;height:8px;border-radius:999px;border:0;cursor:pointer;background:#999;opacity:.6}
     .pgal-dots button[aria-selected="true"]{opacity:1;background:#333}
   </style>
-
-    
-
 </head>
 <body>
 
@@ -67,6 +92,10 @@
     <!-- Info derecha -->
     <div class="hero-texto prod-info">
       <h1>Gelatina Blanca Paquete</h1>
+
+      <!-- 🔥 SUBTÍTULO SEO -->
+      <h2>Gelatina de colágeno natural de pata de res con panela artesanal</h2>
+
       <p>
         Nuestras gelatinas blancas están elaboradas con pata de res de la más alta calidad, obteniendo colágeno 
         puro y natural reconocido por sus propiedades regenerativas y antienvejecimiento. Contribuyen al cuidado de la piel, 
@@ -74,18 +103,28 @@
         con nuestra panela artesanal logramos una gelatina suave, dulce, con un auténtico aroma a melado, fácil de digerir y libre 
         de colesterol, grasas saturadas y grasas trans.
       </p>
+
       <ul class="prod-meta">
         <li><strong>Peso Neto:</strong> 180gr</li>
         <li><strong>Presentación:</strong> Paquete - PP</li>
         <li><strong>Cantidad:</strong> 6 Unidades</li>
         <li><strong>Conservación:</strong> Lugar fresco y seco</li>
       </ul>
-      <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido.">
-          Haz tu pedido por WhatsApp
+
+      <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido de Gelatina Blanca Paquete.">
+        Haz tu pedido por WhatsApp
       </a>
+
+      <!-- 🔥 PÁRRAFO EXTRA SEO -->
+      <p class="seo-extra" style="margin-top:20px; opacity:.85;">
+        La gelatina blanca de pata de res de El Hacendado es un dulce típico colombiano ideal para tiendas, minimercados y distribuidores
+        que buscan productos artesanales con alto contenido de colágeno natural. También contamos con gelatina de pata saborizada, panelitas,
+        jaleas, cocadas y otros dulces tradicionales elaborados con panela y caña de la región antioqueña.
+      </p>
     </div>
   </section>
 
+  <!-- JS carrusel -->
   <script>
   (function(){
     const root = document.getElementById('pgal');
@@ -135,9 +174,9 @@
   })();
   </script>
 
-  <!--CODIGO DE NUMERO WPP-->
+  <!-- WhatsApp -->
   <script>
-    const WA_NUMBER = '573147443294'; // tu número en formato internacional
+    const WA_NUMBER = '573147443294';
     document.querySelectorAll('.btn-wa').forEach(a => {
       const msg = a.dataset.msg || 'Hola';
       a.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
