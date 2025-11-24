@@ -4,8 +4,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blanqueado | El Hacendado</title>
+
+  <!-- 🔥 TITLE SEO OPTIMIZADO -->
+  <title>Blanqueado tradicional antioqueño | Dulces típicos colombianos | El Hacendado</title>
+
+  <!-- 🔥 META DESCRIPTION SEO -->
+  <meta name="description" content="Blanqueado artesanal elaborado con jugo de caña dulce. Dulce típico antioqueño tradicional. Ideal para tiendas y distribuidores al por mayor y al detal en Colombia.">
+
   <link rel="stylesheet" href="../style.css" />
+
+  <!-- 🔥 SCHEMA PRODUCT (para Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Blanqueado tradicional",
+    "image": "https://elhacendado.com.co/img/BlanqueadoBandeja.png",
+    "description": "Blanqueado artesanal hecho con jugo de caña. Dulce típico antioqueño elaborado de manera tradicional.",
+    "brand": {
+      "@type": "Brand",
+      "name": "El Hacendado"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://elhacendado.com.co/DescProductos/Blanqueado.html",
+      "priceCurrency": "COP",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
 
   <!-- Ajustes carrusel + fondo crema -->
   <style>
@@ -14,14 +41,14 @@
     .prod-hero--cremaf{background:var(--cremaf)}
 
     .prod-gallery{position:relative;width:100%;max-width:520px}
-    .pgal-viewport{overflow:hidden;border-radius:12px;background:var(--cremaf)} /* sin fondo blanco */
+    .pgal-viewport{overflow:hidden;border-radius:12px;background:var(--cremaf)}
     .pgal-track{display:flex;transition:transform .35s ease}
     .pgal-track img{width:100%;flex:0 0 100%;height:auto;object-fit:contain;display:block}
 
     .pgal-arrow{
       position:absolute;top:50%;transform:translateY(-50%);
       width:44px;height:44px;border:0;border-radius:999px;
-      background:rgba(0,0,0,.6);color:#fff;cursor:pointer;z-index:5; /* arriba y clickeable */
+      background:rgba(0,0,0,.6);color:#fff;cursor:pointer;z-index:5;
     }
     .pgal-arrow.left{left:12px}
     .pgal-arrow.right{right:12px}
@@ -49,6 +76,7 @@
   </header>
 
   <section class="hero prod-hero prod-hero--cremaf">
+
     <!-- Carrusel -->
     <div class="prod-gallery" id="pgal">
       <button class="pgal-arrow left" aria-label="Anterior">❮</button>
@@ -65,26 +93,37 @@
 
     <!-- Info derecha -->
     <div class="hero-texto prod-info">
+
       <h1>Blanqueado</h1>
+
+      <!-- 🔥 SUBTÍTULO SEO -->
+      <h2>Dulce típico antioqueño elaborado con jugo de caña</h2>
+
       <p>
         Elaborados con jugo de caña dulce y esencias naturales, nuestros tradicionales 
         blanqueados se deshacen suavemente en la boca, brindando una experiencia única de sabor 
-        tradición. Durante generaciones han sido el acompañante perfecto de la mazamorra en los hogares 
-        colombianos, evocando recuerdos familiares y momentos de dulzura. Su característico sabor a panela, 
-        realzado con esencias naturales, les confiere un aroma inigualable y un delicado toque a melado que conquista
-        los paladares y celebra lo mejor de nuestra tradición antioqueña.
+        y tradición. Durante generaciones han sido el acompañante perfecto de la mazamorra en los hogares 
+        colombianos. Su sabor artesanal y su toque a melado celebran lo mejor de la tradición antioqueña.
       </p>
+
       <ul class="prod-meta">
         <li><strong>Peso Neto:</strong> 240gr</li>
         <li><strong>Presentación:</strong> Base Espumada - Termoencogible</li>
         <li><strong>Cantidad:</strong> 12 Unidades</li>
-        <li><strong>Conservación:</strong> En Lugar seco y fresco</li>
+        <li><strong>Conservación:</strong> Lugar seco y fresco</li>
       </ul>
       
-        <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido.">
-              Haz tu pedido por WhatsApp
-        </a>
+      <a class="btn-wa" data-msg="Hola El Hacendado, quiero hacer un pedido.">
+        Haz tu pedido por WhatsApp
       </a>
+
+      <!-- 🔥 PÁRRAFO EXTRA SEO -->
+      <p class="seo-extra" style="margin-top:20px; opacity:.85;">
+        El blanqueado es uno de los dulces típicos más tradicionales de Colombia. 
+        En El Hacendado elaboramos gelatina de pata, panelitas, jaleas, cocadas y otros derivados de la caña,
+        conservando el sabor auténtico de la tradición antioqueña.
+      </p>
+
     </div>
   </section>
 
@@ -125,7 +164,6 @@
     prev.addEventListener('click', ()=>{ if(idx>0){ idx--; update(); }});
     next.addEventListener('click', ()=>{ if(idx<slides.length-1){ idx++; update(); }});
 
-    // Swipe
     let startX=0, dragging=false;
     viewport.addEventListener('pointerdown', e=>{ dragging=true; startX=e.clientX; viewport.setPointerCapture(e.pointerId); });
     viewport.addEventListener('pointerup',   e=>{
@@ -144,9 +182,9 @@
   })();
   </script>
 
-  <!--CODIGO DE NUMERO WPP-->
+  <!-- WhatsApp -->
   <script>
-    const WA_NUMBER = '573147443294'; // tu número en formato internacional
+    const WA_NUMBER = '573147443294';
     document.querySelectorAll('.btn-wa').forEach(a => {
       const msg = a.dataset.msg || 'Hola';
       a.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
@@ -154,7 +192,6 @@
       a.rel = 'noopener';
     });
   </script>
-
 
 </body>
 </html>
