@@ -67,6 +67,12 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero hero-bg-slider">
+    <div class="hero-slide" style="background-image:url('img/Blanqueadoordenado.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('img/jaleaordenada.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('img/plantaTrab.png')"></div>
+    <div class="hero-slide" style="background-image:url('img/QUESODULCETODO.png')"></div>
+    <div class="hero-slide" style="background-image:url('img/panelitaBlancaBandeja.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('img/gelatinablancaagranel.png')"></div>
     <div class="hero-texto">
       <span class="section-badge">Desde Antioquia, con tradición</span>
       <h1>Descubre el sabor auténtico de los <em>dulces típicos antioqueños</em></h1>
@@ -312,6 +318,19 @@
       a.rel = 'noopener';
     });
   </script>
+
+  <script>
+  (function(){
+    const slides = document.querySelectorAll('.hero-slide');
+    let current = 0;
+    slides[current].classList.add('active');
+    setInterval(function(){
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 4500);
+  })();
+</script>
 
 </body>
 </html>

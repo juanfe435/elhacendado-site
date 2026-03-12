@@ -161,6 +161,7 @@ h1, h2, h3, h4 {
   align-items: center;
   padding: 90px 56px 90px 64px;
   overflow: hidden;
+  background-color: #1a1108;
 }
 
 /* Fondo animado */
@@ -174,7 +175,7 @@ h1, h2, h3, h4 {
   transform: scale(1.06);
   filter: brightness(0.50) saturate(1.1);
   z-index: 0;
-  animation: heroBgSwap 22s infinite ease-in-out;
+  
 }
 
 /* Gradiente cálido encima del fondo */
@@ -203,20 +204,14 @@ h1, h2, h3, h4 {
   opacity: 0.7;
 }
 
-.hero-bg-slider > * {
+.hero-bg-slider > *:not(.hero-slide) {
   position: relative;
   z-index: 1;
   max-width: 680px;
 }
 
 /* Animación de fondo */
-@keyframes heroBgSwap {
-  0%,  20%  { background-image: url("img/plantaTrab.png"); }
-  25%, 40%  { background-image: url("img/QUESODULCETODO.png"); }
-  45%, 60%  { background-image: url("img/Blanqueadoagranel.png"); }
-  65%, 80%  { background-image: url("img/gelatinablancaagranel.png"); }
-  85%, 100% { background-image: url("img/jaleaagranel.png"); }
-}
+
 
 /* Texto hero */
 .hero-texto h1 {
@@ -1000,3 +995,17 @@ button, .btn-wa, .copy-btn, .carrusel-flecha, .nav-menu a {
 @media (max-width: 768px) {
   :root { --arrow-size: 50px; }
 }
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.06);
+  filter: brightness(0.50) saturate(1.1);
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1.4s ease-in-out;
+}
+.hero-slide.active { opacity: 1; }
+
