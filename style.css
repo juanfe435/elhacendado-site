@@ -394,13 +394,14 @@ h1, h2, h3, h4 {
   border: 1px solid var(--border-warm);
   padding: 16px 16px 18px;
   box-shadow: var(--sombra-card);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   gap: 12px;
+  overflow: hidden;
 }
 
 .prod-card:hover {
-  transform: translateY(-5px) scale(1.015);
-  box-shadow: 0 16px 36px rgba(120,70,20,0.13), 0 4px 12px rgba(120,70,20,0.08);
+  transform: translateY(-7px);
+  box-shadow: 0 22px 44px rgba(120,70,20,0.18), 0 8px 18px rgba(120,70,20,0.10);
 }
 
 .prod-card:focus-visible {
@@ -414,7 +415,10 @@ h1, h2, h3, h4 {
   object-fit: contain;
   border-radius: 10px;
   display: block;
+  transition: transform 0.45s ease;
 }
+
+.prod-card:hover img { transform: scale(1.08); }
 
 .prod-card-caption {
   text-align: center;
