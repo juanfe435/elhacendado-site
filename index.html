@@ -32,7 +32,7 @@
     },
     "priceRange": "$$",
     "sameAs": [
-      "https://www.facebook.com/share/1Ef7MXebLf/?mibextid=wwXIfr",
+      "https://www.facebook.com/profile.php?id=61552268338573",
       "https://www.instagram.com/elhacendado/"
     ],
     "description": "Fabricantes de dulces típicos antioqueños: gelatina de pata, blanqueados, panelitas, jaleas y queso dulce. Productos artesanales al por mayor y al detal en Colombia."
@@ -278,6 +278,52 @@
             </a>
             <p class="desk-time"><strong>🕗 Lunes a Viernes — 7:00 a.m. a 4:00 p.m.</strong></p>
           </article>
+
+          <!-- Formulario de solicitudes -->
+          <article class="contact-card contact-form-card" aria-labelledby="t-formulario">
+            <header>
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="2" fill="none"/>
+                  <path d="M8 9h8M8 13h5" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </span>
+              <h3 id="t-formulario">¿Tienes una solicitud especial?</h3>
+            </header>
+            <p class="form-intro">Para pedidos al por mayor, quieres ser distribuidor, o cualquier comentario que prefieras escribir con calma, llena este formulario y te contactamos por correo.</p>
+
+            <form class="request-form" action="https://formsubmit.co/gerenciacomercial@elhacendado.com.co" method="POST">
+              <input type="hidden" name="_subject" value="Nueva solicitud desde el sitio web - El Hacendado">
+              <input type="hidden" name="_template" value="table">
+              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+              <div class="form-row">
+                <label for="rf-nombre">Nombre</label>
+                <input type="text" id="rf-nombre" name="Nombre" required>
+              </div>
+
+              <div class="form-row">
+                <label for="rf-contacto">Correo o teléfono</label>
+                <input type="text" id="rf-contacto" name="Correo o teléfono" required>
+              </div>
+
+              <div class="form-row">
+                <label for="rf-tipo">Tipo de solicitud</label>
+                <select id="rf-tipo" name="Tipo de solicitud">
+                  <option value="Compra al detal">Compra al detal</option>
+                  <option value="Distribución / mayorista">Distribución / mayorista</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label for="rf-mensaje">Mensaje</label>
+                <textarea id="rf-mensaje" name="Mensaje" rows="4" required></textarea>
+              </div>
+
+              <button type="submit" class="btn-solid form-submit">Enviar solicitud</button>
+            </form>
+          </article>
         </div>
       </div>
     </section>
@@ -340,7 +386,7 @@
       <div class="footer-col">
         <h4>Síguenos</h4>
         <div class="footer-social">
-          <a href="https://www.facebook.com/share/1Ef7MXebLf/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook de El Hacendado">
+          <a href="https://www.facebook.com/profile.php?id=61552268338573" target="_blank" rel="noopener" aria-label="Facebook de El Hacendado">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg>
           </a>
           <a href="https://www.instagram.com/elhacendado/" target="_blank" rel="noopener" aria-label="Instagram de El Hacendado">

@@ -780,6 +780,71 @@ h1, h2, h3, h4 {
   letter-spacing: 0.2px;
 }
 
+/* ─── Formulario de solicitudes ──────────────────────────── */
+.contact-form-card { grid-column: 1 / -1; }
+
+.form-intro {
+  color: #4a3a28;
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+
+.request-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-row { display: flex; flex-direction: column; gap: 6px; }
+
+.request-form .form-row:nth-child(4),
+.request-form .form-row:nth-child(5) {
+  grid-column: 1 / -1;
+}
+
+.form-row label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--negro);
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14.5px;
+  color: var(--negro);
+  border: 1px solid var(--border-warm);
+  border-radius: 10px;
+  padding: 11px 14px;
+  background: var(--cremaf);
+  resize: vertical;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--verde);
+  box-shadow: 0 0 0 3px rgba(58,122,46,0.14);
+}
+
+.form-submit {
+  grid-column: 1 / -1;
+  justify-self: start;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+@media (max-width: 620px) {
+  .request-form { grid-template-columns: 1fr; }
+  .request-form .form-row:nth-child(4),
+  .request-form .form-row:nth-child(5) { grid-column: 1; }
+  .form-submit { justify-self: stretch; text-align: center; }
+}
+
 /* ─── Descripción empresa ─────────────────────────────────── */
 .descripcion-empresa {
   background: var(--verde-oscuro);
