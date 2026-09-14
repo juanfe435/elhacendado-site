@@ -298,45 +298,33 @@ h1, h2, h3, h4 {
   color: var(--verde-oscuro);
 }
 
-.clientes-track-wrap {
-  overflow: hidden;
-  width: 100%;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-}
-
 .clientes-track {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 72px;
-  width: max-content;
-  animation: clientes-scroll 20s linear infinite;
+  justify-content: center;
+  gap: 56px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
-
-.clientes-track-wrap:hover .clientes-track { animation-play-state: paused; }
 
 .clientes-track img {
-  height: 52px;
+  height: 76px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(1) opacity(0.55);
-  transition: filter 0.25s ease;
+  filter: grayscale(1) opacity(0.6);
+  transition: filter 0.25s ease, transform 0.25s ease;
 }
 
-.clientes-track img:hover { filter: grayscale(0) opacity(1); }
-
-@keyframes clientes-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .clientes-track { animation: none; flex-wrap: wrap; justify-content: center; }
+.clientes-track img:hover {
+  filter: grayscale(0) opacity(1);
+  transform: scale(1.05);
 }
 
 @media (max-width: 700px) {
-  .clientes-track { gap: 44px; }
-  .clientes-track img { height: 40px; }
+  .clientes-track { gap: 36px; }
+  .clientes-track img { height: 56px; }
 }
 
 /* ─── Grid de productos ─────────────────────────────────── */
