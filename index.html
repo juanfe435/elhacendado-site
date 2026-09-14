@@ -308,10 +308,17 @@
     </div>
   </section>
 
+  <!-- ===== WHATSAPP FLOTANTE (móvil) ===== -->
+  <a class="wa-fab" data-msg="Hola El Hacendado, quiero hacer un pedido." aria-label="Escribir por WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.52 3.48A11.87 11.87 0 0 0 12.06 0 12 12 0 0 0 0 12a11.87 11.87 0 0 0 3.48 8.52A11.87 11.87 0 0 0 12 24a12 12 0 0 0 12-12 11.87 11.87 0 0 0-3.48-8.52ZM12 22a9.93 9.93 0 0 1-5.28-1.52l-3.16.84.84-3.16A10 10 0 1 1 22 12 9.94 9.94 0 0 1 12 22Zm5.18-6.6c-.28-.14-1.67-.82-1.93-.91s-.45-.14-.64.14-.73.91-.91 1.1-.33.21-.61.07a8.18 8.18 0 0 1-2.41-1.49 9.04 9.04 0 0 1-1.67-2.06c-.17-.28 0-.43.13-.57s.28-.32.42-.49a1.9 1.9 0 0 0 .28-.49.52.52 0 0 0 0-.49c0-.14-.64-1.53-.87-2.09s-.46-.48-.64-.49h-.55a1.06 1.06 0 0 0-.76.35 3.19 3.19 0 0 0-1 2.35 5.56 5.56 0 0 0 1.17 2.53 12.78 12.78 0 0 0 4.83 4.26c.67.29 1.2.46 1.6.59a3.85 3.85 0 0 0 1.76.11 2.87 2.87 0 0 0 1.88-1.31 2.37 2.37 0 0 0 .17-1.31c-.07-.18-.26-.25-.54-.39Z"/>
+    </svg>
+  </a>
+
   <!-- WhatsApp dinámico -->
   <script>
     const WA_NUMBER = '573147443294';
-    document.querySelectorAll('.btn-wa').forEach(a => {
+    document.querySelectorAll('.btn-wa, .wa-fab').forEach(a => {
       const msg = a.dataset.msg || 'Hola';
       a.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
       a.target = '_blank';
