@@ -278,6 +278,49 @@ h1, h2, h3, h4 {
   object-fit: cover;
 }
 
+/* ─── Divisores curvos entre secciones ───────────────────── */
+.wave-divider { width: 100%; line-height: 0; }
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 70px;
+}
+
+.wave-divider path { transition: fill 0.3s ease; }
+
+.wave-divider--dark-to-cream { background: var(--negro); }
+.wave-divider--dark-to-cream path { fill: var(--cremaf); }
+
+.wave-divider--cream-to-green { background: var(--cremaf); }
+.wave-divider--cream-to-green path { fill: var(--verde-oscuro); }
+
+@media (max-width: 700px) {
+  .wave-divider svg { height: 42px; }
+}
+
+/* ─── Animaciones al hacer scroll ────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-in { opacity: 1; transform: translateY(0); }
+
+.beneficios-grid .reveal-in:nth-child(2) { transition-delay: 0.08s; }
+.beneficios-grid .reveal-in:nth-child(3) { transition-delay: 0.16s; }
+.beneficios-grid .reveal-in:nth-child(4) { transition-delay: 0.24s; }
+
+.productos-grid .reveal-in:nth-child(2) { transition-delay: 0.05s; }
+.productos-grid .reveal-in:nth-child(3) { transition-delay: 0.10s; }
+.productos-grid .reveal-in:nth-child(4) { transition-delay: 0.15s; }
+.productos-grid .reveal-in:nth-child(5) { transition-delay: 0.20s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
 /* ─── Franja de clientes ─────────────────────────────────── */
 .clientes-strip {
   background: var(--cremaf);

@@ -86,6 +86,12 @@
     </div>
   </section>
 
+  <div class="wave-divider wave-divider--dark-to-cream" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,32 C240,80 480,0 720,24 C960,48 1200,88 1440,40 L1440,90 L0,90 Z"/>
+    </svg>
+  </div>
+
   <!-- ===== CLIENTES ===== -->
   <section class="clientes-strip" aria-label="Clientes que confían en El Hacendado">
     <div class="clientes-header">
@@ -356,6 +362,11 @@
     </script>
   </section>
 
+  <div class="wave-divider wave-divider--cream-to-green" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,50 C360,0 1080,90 1440,30 L1440,90 L0,90 Z"/>
+    </svg>
+  </div>
 
   <!-- ===== DESCRIPCIÓN EMPRESA ===== -->
   <section class="descripcion-empresa">
@@ -450,6 +461,34 @@
     }, 4500);
   })();
 </script>
+
+  <!-- Animaciones al hacer scroll -->
+  <script>
+  (function(){
+    const targets = document.querySelectorAll(
+      '.section-header, .clientes-header, .clientes-track, .beneficio-item, .contact-card, .titulo-descripcion, .texto-descripcion, .footer-col, .prod-card'
+    );
+    if (!targets.length) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      targets.forEach(el => el.classList.add('reveal-in'));
+      return;
+    }
+
+    targets.forEach(el => el.classList.add('reveal'));
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    targets.forEach(el => io.observe(el));
+  })();
+  </script>
 
 </body>
 </html>
