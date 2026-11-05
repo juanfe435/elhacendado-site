@@ -54,8 +54,7 @@
       <button class="pgal-arrow left" aria-label="Anterior">❮</button>
       <div class="pgal-viewport">
         <div class="pgal-track">
-          <img src="../img/Blanqueadoindividual.png" alt="Blanqueado ind- vista 1">
-          <img src="../img/BlanqueadoIndividual2.jpg" alt="Blanqueados individuales envueltos - vista 2">
+          <img src="../img/BlanqueadoIndividual.jpg" alt="Blanqueados individuales envueltos">
         </div>
       </div>
       <button class="pgal-arrow right" aria-label="Siguiente">❯</button>
@@ -141,6 +140,11 @@
 
     makeDots();
     update();
+    if (slides.length < 2) {
+      prev.style.display = 'none';
+      next.style.display = 'none';
+      dotsBox.style.display = 'none';
+    }
   })();
   </script>
 
