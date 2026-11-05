@@ -54,8 +54,7 @@
       <button class="pgal-arrow left" aria-label="Anterior">❮</button>
       <div class="pgal-viewport">
         <div class="pgal-track">
-          <img src="../img/PanelitaCafeIndividual.png" alt="PanelitaCafe ind- vista 1">
-          <img src="../img/PanelitaCafeIndividual.png" alt="PanelitaCafe - vista 2">
+          <img src="../img/PanelitaCafeIndividual.jpg" alt="Panelitas café individuales envueltas">
           
         </div>
       </div>
@@ -141,6 +140,11 @@
 
     makeDots();
     update();
+    if (slides.length < 2) {
+      prev.style.display = 'none';
+      next.style.display = 'none';
+      dotsBox.style.display = 'none';
+    }
   })();
   </script>
 
