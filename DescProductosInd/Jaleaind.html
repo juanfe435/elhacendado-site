@@ -54,7 +54,7 @@
       <button class="pgal-arrow left" aria-label="Anterior">❮</button>
       <div class="pgal-viewport">
         <div class="pgal-track">
-          <img src="../img/JaleaIndividual.png" alt="Jalea ind- vista 1">
+          <img src="../img/GelatinaNegraIndividual.jpg" alt="Gelatinas negras individuales envueltas">
           <img src="../img/gelatinanegratorre.jpg" alt="Jalea ind - vista 2">
           
         </div>
@@ -142,6 +142,11 @@
 
     makeDots();
     update();
+    if (slides.length < 2) {
+      prev.style.display = 'none';
+      next.style.display = 'none';
+      dotsBox.style.display = 'none';
+    }
   })();
   </script>
 
