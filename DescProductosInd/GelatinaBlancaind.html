@@ -54,8 +54,7 @@
       <button class="pgal-arrow left" aria-label="Anterior">❮</button>
       <div class="pgal-viewport">
         <div class="pgal-track">
-          <img src="../img/GelatinaBlancaIndividual.png" alt="gelatina blanca ind - vista 1">
-          <img src="../img/GelatinaBlancaIndividual.png" alt="gealtina blanca ind - vista 2">
+          <img src="../img/GelatinaBlancaIndividual.jpg" alt="Gelatinas blancas individuales envueltas">
         </div>
       </div>
       <button class="pgal-arrow right" aria-label="Siguiente">❯</button>
@@ -140,6 +139,11 @@
 
     makeDots();
     update();
+    if (slides.length < 2) {
+      prev.style.display = 'none';
+      next.style.display = 'none';
+      dotsBox.style.display = 'none';
+    }
   })();
   </script>
 
